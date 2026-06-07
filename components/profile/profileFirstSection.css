@@ -1,0 +1,149 @@
+#app {
+    display: flex;
+}
+@media only screen and (max-width: 640px) {
+    #app {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.profile-first-section {
+    width: 25%;
+    padding: 80px 0;
+    background-color: rgba(27, 73, 101, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+@media only screen and (max-width: 640px) {
+    .profile-first-section{
+        width: 100%;
+    }
+}
+.profile-first-section> div {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 90%;
+    justify-content: center;
+    margin-top: 10px;
+}
+.avatar-container {
+    position:relative;
+    width: 100%;
+    aspect-ratio: 1;
+    margin: 0 auto;
+
+}
+.avatar-image,
+.frame-image{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+}
+.avatar-image{
+    object-fit:cover;
+    border-radius:50%;
+    transform:scale(.8);
+}
+.frame-image{
+    object-fit:contain;
+    z-index: 1;
+    pointer-events:none;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,.25));
+    animation:shipRock 6s ease-in-out infinite;
+}
+@keyframes shipRock {
+    0%,100%{
+        transform:rotate(-1deg);
+    }
+    50%{
+        transform:rotate(1deg);
+    }
+}
+.name {
+    font-family: "Pirata One", cursive;
+    font-size: clamp(1.1rem, 2vw, 1.8rem);
+    text-align: center;
+    color: white;
+}
+.about-me {
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    font-size: clamp(0.7rem, 1.1vw, 1.2rem);
+    text-align: center;
+}
+.contact-container,
+.portfolio-container,
+.language-container {
+    width: 90%;
+    margin: 3rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 2px burlywood solid;
+    padding: 10px;
+    border-radius: 12px;
+    gap: 10px;
+    border-image: radial-gradient(
+        circle, 
+        burlywood 90%, 
+        transparent 100%
+    ) 1;
+}
+.contact-container> li,
+.portfolio-container> li,
+.language-container> li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    overflow-wrap: anywhere;
+    position: relative;
+}
+.contact-container> li:first-child::before,
+.portfolio-container> li:first-child::before,
+.language-container> li:first-child::before  {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        burlywood 50%,
+        transparent 100%
+    );
+}
+
+.contact-container> li> img,
+.portfolio-container> li> img,
+.language-container> li> img {
+    width: clamp(15px, 4vw, 20px);
+    height: clamp(15px, 4vw, 20px);
+}
+
+.contact-container> li,
+.contact-container> li> span,
+.contact-container> li> p,
+.contact-container> li> a,
+.portfolio-container> li,
+.portfolio-container> li> span,
+.portfolio-container> li> p,
+.portfolio-container> li> a,
+.language-container> li,
+.language-container> li> p {
+    color: white;
+    font-size: clamp(0.7rem, 1vw, 1.1rem);
+   
+}
+
+.tags {
+    padding-left: 15px;
+    text-indent: -15px;
+}

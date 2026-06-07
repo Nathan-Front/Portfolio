@@ -1,0 +1,61 @@
+.navbar {
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    margin: 0;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.4s ease;
+    z-index: 9;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212,175,55,.2);
+}
+.navbar.hide {
+    transform: translateY(-100%);
+}
+.my-name {
+    margin: 0 0 0 5rem;
+    padding: 0;
+    color: white;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-family: "Pirata One", cursive;
+    letter-spacing: 3px;
+}
+.nav-links-wrapper {
+    display: flex;
+    gap: 1rem;
+    margin: 0 5rem 0 auto;
+}
+.nav-links> a {
+    color: white;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    position: relative;
+}
+.nav-links> a:hover {
+    color: #d4af37;
+    text-shadow: 0 0 8px rgba(212,175,55,.5);
+}
+.nav-links > a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -80%;
+    width: 0;
+    height: 3px;
+    background-color: #d4af37;;
+    transition: width 0.3s ease;
+}
+.nav-links > a:hover::after {
+    width: 100%;  
+}
+@media only screen and (max-width: 599px) {
+    .my-name {
+        margin: 0 0 0 2rem;
+    }
+    .nav-links-wrapper {
+        margin: 0 2rem 0 auto;
+    }
+}

@@ -1,0 +1,58 @@
+.contact-first-section {
+    width: 60%;
+    margin-left: auto;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+.contact-first-section-images {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.contact-first-section-images> img {
+    width: clamp(32px, 5vw, 80px);
+}
+.contact-first-section-images> img:first-child {
+    transform:scaleY(-1)  rotate(-90deg);
+}
+.contact-first-section-images> img:last-child {
+    transform: rotate(-270deg);
+}
+.contact-first-section-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-first-section-title> h1 {
+    font-family: "Pirata One", serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: 2px;
+    background:
+        linear-gradient(
+            180deg,
+            #3b2417 0%,
+            #2b1d14 60%,
+            #000000 80%,
+            #5a3a22 100%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+}
+.contact-first-section-title> img {
+    width: 80%;
+    height: 40px;
+    margin: 0;
+}
+.contact-first-section> p {
+    font-family: "Pirata One", serif;
+}
