@@ -1,6 +1,4 @@
 
-
-/*Timeline part*/
 .timeline-section {
     position: relative;
     background:
@@ -23,27 +21,26 @@
 }
 .timeline-upper-sub-inner-content {
     margin: 0;
-    width: fit-content;
+    width: 85%;
     display: flex;
     flex-direction: column;
     justify-self: center;
     letter-spacing: -0.02em;
     gap: 1rem;
-    background: rgba(0,0,0,0.18);
-    backdrop-filter: blur(2px);
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(1.5px);
     padding: 3rem;
     border-radius: 24px;
     border: 1px solid rgba(255,255,255,0.08);
 }
 #my-journey {
     margin-bottom: 1rem;
-    color: #dbeafe;
-    font-size: clamp(3rem, 5vw, 5rem);
+    font-size: clamp(2.5rem, 4vw, 5rem);
     letter-spacing: 2px;
-
+    color: #df9e51;
     text-shadow:
-        0 0 20px rgba(255,255,255,0.15),
-        0 4px 20px rgba(0,0,0,0.45); 
+        1px 1px 0 #3a2414,
+        0 0 5px rgba(255,215,0,.3);
 }
 .fly-text span {
     display: inline-block;
@@ -51,7 +48,6 @@
     opacity: 0;
     transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
-/* When the observer adds the active class, they all fly home */
 .fly-text.active span {
     transform: translate(0, 0) rotate(0deg);
     opacity: 1;
@@ -59,20 +55,24 @@
 .timeline-upper-sub-inner-content> p {
     color: #dbeafe;
     line-height: 1.5;
+    color:#f4eccf;
+    text-shadow:
+        1px 1px 0 #3a2414,
+        0 0 5px rgba(255,215,0,.3);
 }
 .timeline-upper-container {
     z-index: 2;
     position: relative;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     padding: 80px 0;
     background-image: linear-gradient(
-    rgba(8,15,30,0.45),
+    rgba(8,15,30,0.35),
     rgba(8,15,30,0.55)
     ),
-    url("../../images/index/journey.JPG");
+    url("../../images/index/worldMap.png");
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
+    background-size: 100% 100%;
 }
 .timeline-upper-container::before {
     content: "";
@@ -94,11 +94,9 @@
 .padding-vertical {
     padding-top: 20px;
     padding-bottom: 20px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     margin-left: 300px;
 }
 .timeline-upper-sub-inner-content {
@@ -112,8 +110,12 @@
     width: 100%;
     height: 80px;
     background-color:  #f8fafc;
-    z-index: 10;
+    z-index: 5;
     position: absolute;
+    background-image: url("../../images/index/timeline/sea.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .padding-top> img,
 .padding-bottom> img {
@@ -205,26 +207,21 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    
     backdrop-filter: blur(12px);
     border-radius: 12px;
     padding: 2.5rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     border: 1px solid rgba(255,255,255,0.3);
     background:
-linear-gradient(
+    linear-gradient(
     180deg,
     rgba(255,255,255,.95),
     rgba(248,250,252,.95)
-);
-background: rgba(255, 255, 255, 0.15); 
-  
-  /* 2. The blur effect (The magic ingredient) */
-  -webkit-backdrop-filter: blur(10px); /* For Safari support */
-  backdrop-filter: blur(10px);
-  
-  /* 5. A soft shadow to lift it off the background */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    );
+    background: rgba(255, 255, 255, 0.15); 
+    -webkit-backdrop-filter: blur(10px); 
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 .timeline-text> h3 {
     font-size: clamp(1.2rem, 2vw, 1.8rem);
