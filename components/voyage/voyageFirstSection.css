@@ -74,7 +74,7 @@
     overflow: hidden;
    /* backdrop-filter: blur(6px);
     border: 1px solid rgba(255,255,255,0.4);*/
-    background-image: url("../../images/contact/woodButton.png");
+    background-image: url("../images/contact/woodButton.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     font-family: "Pirata One", serif;

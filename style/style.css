@@ -5,7 +5,7 @@ body[data-page="voyage"] {
 body[data-page="profile"] {
     background-image:
         linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
-        url("/images/cv/background.png");
+        url("../../images/cv/background.png");
 
     background-blend-mode:multiply;
    
@@ -14,7 +14,7 @@ body[data-page="profile"] {
 }
 
 body[data-page="contact"] {
-    background-image: url("/images/contact/contact.png");
+    background-image: url("../../images/contact/contact.png");
     margin-top: 100px;
 }
 body {
