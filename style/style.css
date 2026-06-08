@@ -30,13 +30,13 @@ body {
 }
 @media only screen and (max-width: 640px) {
     body[data-page="profile"] {
-        background-image: url("/images/cv/mobileBackground.png");
+        background-image: url("../../images/cv/mobileBackground.png");
     }
     body[data-page="contact"] {
-        background-image: url("/images/cv/mobileBackground.png");;
+        background-image: url("../../images/cv/mobileBackground.png");;
     }
     body {
-        background-image: url("/images/cv/mobileBackground.png");
+        background-image: url("../../images/cv/mobileBackground.png");
     }
 }
 h1, h2, h3, h4 {

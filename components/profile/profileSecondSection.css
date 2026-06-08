@@ -32,7 +32,7 @@ h3{
     padding: 1.5rem;
     position: relative;
     gap: 1rem;
-    background-image: url("/images/cv/woodBanner.png");
+    background-image: url("../../images/cv/woodBanner.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     transform-origin: top center;
@@ -301,7 +301,7 @@ h3{
     top: -15px;
     left: -39px;
     z-index: 1;
-    background-image: url("/images/cv/island.png");
+    background-image: url("../../images/cv/island.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -531,12 +531,12 @@ h3{
     width: 24px;
     height: 20px;
     display: inline-block;
-    background: url("/images/cv/scroll.png") center/contain no-repeat;
+    background: url("../../images/cv/scroll.png") center/contain no-repeat;
     transition: transform 0.3s ease;
     margin-left: 4px;
 }
 .logbook-link:hover .icon {
-    background-image: url("/images/index/footer/pirateship.png");
+    background-image: url("../../images/index/footer/pirateship.png");
     transform: translateX(4px);
 }
 .logbook-link> span:last-child {

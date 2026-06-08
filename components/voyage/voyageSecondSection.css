@@ -69,7 +69,7 @@
     rgba(8,15,30,0.45),
     rgba(8,15,30,0.55)
     ),
-    url("/images/index/journey.JPG");
+    url("../../images/index/journey.JPG");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
