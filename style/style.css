@@ -3,8 +3,16 @@ body[data-page="voyage"] {
     background-image: unset;
 }
 body[data-page="profile"] {
-     background-image: url("/images/cv/background.png");
+    background-image:
+        linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
+        url("/images/cv/background.png");
+
+    background-blend-mode:multiply;
+   
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
+
 body[data-page="contact"] {
     background-image: url("/images/contact/contact.png");
     margin-top: 100px;
@@ -32,7 +40,7 @@ body {
     }
 }
 h1, h2, h3, h4 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Pirata One", cursive;
     margin: 0;
 }
 h1 {

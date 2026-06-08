@@ -71,28 +71,32 @@ textarea::placeholder {
 }
 .send-button {
     width: 50%;
-    height: 8vh;
+    height: 9vh;
     border: none;
     background-color: transparent;
-    background-image: url("/images/contact/woodButton.png");
+    background-image: url("/images/contact/bottleMessage2.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     font-family: "Pirata One", serif;
-    font-size: clamp(1rem, 1.3vw, 1.5rem);
+    
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    animation: floatWave 3s ease-in-out infinite;
+    filter: brightness(0.9);
+}
+.send-button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1);
+}
+.send-button> span {
+    font-size: clamp(0.9rem, 1.2vw, 1.5rem);
+    margin-left: -30%;
     color: #d4af37;
     text-shadow:
         1px 1px 0 #3a2414,
         0 0 5px rgba(255,215,0,.3);
-}
-.send-button:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.1);
-}
-.send-button {
-    animation: floatWave 3s ease-in-out infinite;
 }
 @keyframes floatWave {
     0%, 100% {

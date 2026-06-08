@@ -19,11 +19,12 @@
             rgba(0,0,0,0.35),
             rgba(0,0,0,0.35)
         ),
-        url("/images/index/firstSection.jpg");
+        url("/images/index/map.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: -2;
+    
 }
 .about-section::after {
     content: "";
@@ -31,37 +32,13 @@
     inset: 0;
     background:
         radial-gradient(
-            circle at center,
+            circle at right,
             transparent 20%,
             rgba(0,0,0,0.15) 45%,
-            rgba(0,0,0,0.7) 100%
+            rgba(0,0,0,0.8) 100%
         );
     z-index: -1;
-}/*
-@keyframes waveMotion {
-    0% {
-        transform: scale(1.03) translateX(0px) translateY(0px);
-    }
-
-    25% {
-        transform: scale(1.04) translateX(-8px) translateY(-4px);
-    }
-
-    50% {
-        transform: scale(1.05) translateX(0px) translateY(6px);
-    }
-
-    75% {
-        transform: scale(1.04) translateX(8px) translateY(-3px);
-    }
-
-    100% {
-        transform: scale(1.03) translateX(0px) translateY(0px);
-    }
 }
-.about-section::before {
-    animation: waveMotion 18s ease-in-out infinite;
-}*/
 .about-section> p {
     max-width: 60%;
     text-align: center;
@@ -69,6 +46,7 @@
     text-shadow: 0 2px 10px rgba(0,0,0,0.5);
     font-weight: 400;
     color:  #dbeafe;
+    font-family: 'Merriweather', serif;
 }
 #multiline-typewriter span {
   display: inline; /* Keeps the text wrapping completely natural */
@@ -86,49 +64,58 @@
     margin-top: 3rem;
     font-size: clamp(1.2rem, 1.5vw, 1.5rem);
     font-weight: 600;
-    padding: 10px 20px;
-    color: #dbeafe;
+    padding:  20px;
+    /*color: #dbeafe;
     border: 1px aliceblue solid;
-    box-shadow: 0px 3px 8px rgba(0,0,0, 0.3);
+    box-shadow: 0px 3px 8px rgba(0,0,0, 0.3);*/
     position: relative;
-    z-index: 1;
+    
     border-radius: 12px;
     overflow: hidden;
-    backdrop-filter: blur(6px);
-    border: 1px solid rgba(255,255,255,0.4);
-}
-.contact-btn:after {
-    content: "";
-    width: 0;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    background-color: aliceblue;
-    transition: width 0.3s ease;
-    z-index: -1;
-}
-.contact-btn:hover::after {
-    width: 100%;
-    
+   /* backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.4);*/
+    background-image: url("/images/contact/woodButton.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: "Pirata One", serif;
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d4af37;
+    text-shadow:
+        1px 1px 0 #3a2414,
+        0 0 5px rgba(255,215,0,.3);
+    animation: seaFloat 4s ease-in-out infinite;
+    transform-origin: center center;
 }
 .contact-btn:hover {
     transform: translateY(-2px);
-    transition: transform 0.3s ease;
-    background: rgba(255,255,255,0.15);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    color: #000000;
+    animation-play-state: paused;
 }
 
-@keyframes float {
-    0%,100% {
-        transform: translateY(0px);
+@keyframes seaFloat{
+    0%,100%{
+        transform:
+            translateY(0)
+            rotate(-1deg);
     }
-    50% {
-        transform: translateY(-6px);
+
+    25%{
+        transform:
+            translateY(-3px)
+            rotate(0.5deg);
     }
-}
-.paper {
-    animation: float 6s ease-in-out infinite;
+
+    50%{
+        transform:
+            translateY(-1px)
+            rotate(1deg);
+    }
+
+    75%{
+        transform:
+            translateY(2px)
+            rotate(-0.5deg);
+    }
 }

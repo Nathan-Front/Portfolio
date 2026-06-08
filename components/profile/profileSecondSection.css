@@ -27,17 +27,37 @@ h3{
     display: flex;
     align-items: center;
     width: 60%;
-    margin-top: 100px;
+    margin-left: 20px;
+    margin-top: calc(var(--nav-height));
     padding: 1.5rem;
     position: relative;
     gap: 1rem;
-    background: rgba(255,248,235,.5);
-    border: 1px solid rgba(177,137,73,.3);
-    border-radius: 12px;
-    box-shadow:
-        inset 0 0 15px rgba(60,30,0,.25),
-        inset 0 0 40px rgba(80,40,0,.15);
+    background-image: url("/images/cv/woodBanner.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform-origin: top center;
+    animation: swayFrontBack 5s ease-in-out infinite;
+    filter: drop-shadow(0 10px 10px rgba(0,0,0,.25));
 }
+@keyframes swayFrontBack{
+    0%,100%{
+        transform:
+            perspective(1200px)
+            rotateX(4deg);
+
+        filter:
+            drop-shadow(0 15px 12px rgba(0,0,0,.3));
+    }
+    50%{
+        transform:
+            perspective(1200px)
+            rotateX(-4deg);
+
+        filter:
+            drop-shadow(0 5px 6px rgba(0,0,0,.15));
+    }
+}
+/*
 .main-title-container::after{
     content:"";
     position:absolute;
@@ -85,21 +105,24 @@ h3{
     25%{transform: scaleX(-1) rotate(-3deg);}
     50%{transform: scaleX(-1) rotate(3deg);}
     100%{transform: scaleX(-1) rotate(0deg);}
-}
+}*/
 .main-title-container > img {
     width: clamp(32px, 5vw, 50px);
     height: clamp(32px, 5vw, 50px);
 }
 .main-title-container> h1 {
     font-family: "Cinzel", serif;
-    font-size: clamp(1.5rem, 2.5vw, 3rem);
-    color: #0A2540;
-    text-shadow: 4px 4px 8px rgba(255,245,220,.75);
-    margin: 0;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    color: #d4af37;
+    text-shadow:
+        1px 1px 0 #3a2414,
+        0 0 5px rgba(255,215,0,.3);
+    margin: 10% auto 0 auto;
     letter-spacing: 2px;
+    text-align: center;
 }
 .about-me-container {
-    width: 60%;
+    width: 94%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -108,9 +131,40 @@ h3{
     border: 1px solid rgba(177,137,73,.3);
     border-radius: 12px;
     box-shadow:
-        inset 0 0 15px rgba(60,30,0,.25),
-        inset 0 0 40px rgba(80,40,0,.15);
+        0 12px 30px rgba(0,0,0,.25),
+        inset 0 0 20px rgba(0,0,0,.08);
+
+    backdrop-filter: blur(2px);
     padding: 1.5rem;
+    transform:rotate(-0.4deg);
+}
+.tack{
+    position:absolute;
+    width:18px;
+    height:18px;
+    filter:
+        drop-shadow(0 2px 2px rgba(0,0,0,.4))
+        drop-shadow(0 4px 6px rgba(0,0,0,.2));
+}
+
+.tl{
+    top:10px;
+    left:10px;
+}
+
+.tr{
+    top:10px;
+    right:10px;
+}
+
+.bl{
+    bottom:10px;
+    left:10px;
+}
+
+.br{
+    bottom:10px;
+    right:10px;
 }
 .about-me-container> h3 {
     font-size: clamp(1.3rem, 2vw, 2rem);
@@ -153,16 +207,7 @@ h3{
 .sub-title-container> h3> img {
     width: clamp(32px, 5vw, 50px);
     height: clamp(32px, 5vw, 50px);
-}/*
-.sub-title-container::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    background: burlywood;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
-    width: 100%;
-    bottom: 0;
-}*/
+}
 .traits-container {
     display: flex;
 }
@@ -203,6 +248,7 @@ h3{
         inset 0 0 15px rgba(60,30,0,.25),
         inset 0 0 40px rgba(80,40,0,.15);
     padding: 1.5rem;
+    transform: rotate(0.3deg);
 }/*
 .voyage-timeline::after {
     content: "";
@@ -254,8 +300,6 @@ h3{
     
     top: -15px;
     left: -39px;
-    
-  
     z-index: 1;
     background-image: url("/images/cv/island.png");
     background-repeat: no-repeat;
@@ -387,6 +431,7 @@ h3{
         inset 0 0 40px rgba(80,40,0,.15);
     padding: 1.5rem 1.5rem 0 1.5rem;
     margin-bottom: 20px;
+    transform: rotate(-0.2deg);
 }
 .explore-section> h3 {
     font-size: clamp(1.3rem, 2vw, 2rem);
