@@ -26,8 +26,8 @@ h3{
 .main-title-container {
     display: flex;
     align-items: center;
-    width: 60%;
-    margin-left: 20px;
+    width: 50%;
+    margin-left: 50px;
     margin-top: calc(var(--nav-height));
     padding: 1.5rem;
     position: relative;
@@ -111,14 +111,14 @@ h3{
     height: clamp(32px, 5vw, 50px);
 }
 .main-title-container> h1 {
-    font-family: "Cinzel", serif;
+    font-family: "Pirata One", serif;
     font-size: clamp(1.2rem, 2.5vw, 2rem);
     color: #d4af37;
     text-shadow:
         1px 1px 0 #3a2414,
         0 0 5px rgba(255,215,0,.3);
     margin: 10% auto 0 auto;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     text-align: center;
 }
 .about-me-container {

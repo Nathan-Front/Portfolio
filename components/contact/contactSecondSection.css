@@ -118,7 +118,7 @@ textarea::placeholder {
 }
 .contact-right-container-title> h3 {
     width: 80%;
-    margin: 15% 0 0 18%;
+    margin: 25% 0 0 18%;
     text-align: center;
     font-family: "Pirata One", serif;
     font-size: clamp(0.9rem, 1.2vw, 1.3rem);
@@ -142,8 +142,13 @@ textarea::placeholder {
     overflow-wrap: anywhere;
 }
 .contact-right-container> ul> li> img {
-    width: clamp(22px, 5vw, 40px);
-    height: clamp(22px, 5vw, 40px);
+    width: 15%;
+    filter:
+        sepia(100%)
+        saturate(250%)
+        hue-rotate(350deg)
+        brightness(1)
+        drop-shadow(2px 2px 3px rgba(0,0,0,0.5));
 }
 .contact-right-container> ul> li> div> h4 {
     font-family: "Pirata One", serif;

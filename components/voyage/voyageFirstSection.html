@@ -10,4 +10,36 @@
     dependable developer.
   </p>
   <a href="#contact" class="contact-btn">Contact The Captain</a>
+  <div class="map">
+    <svg class="route-svg" viewBox="0 0 1000 200" preserveAspectRatio="none">
+      <path
+        id="route"
+        d="M950 100
+         C700 180, 300 20, 50 100"
+      />
+      <g class="treasure-x" transform="translate(50 100)">
+        <line x1="-6" y1="-6" x2="6" y2="6" />
+        <line x1="-6" y1="6" x2="6" y2="-6" />
+      </g>
+      <image
+        href="../../images/index/footer/pirateship.png"
+        x="-20"
+        y="-15"
+        width="30"
+        height="15"
+        preserveAspectRatio="none"
+      >
+        <animateMotion dur="30s" repeatCount="indefinite" rotate="auto-reverse">
+          <mpath href="#route" />
+        </animateMotion>
+        <animate
+          attributeName="opacity"
+          values="1;1;0.2"
+          keyTimes="0;0.7;1"
+          dur="30s"
+          repeatCount="indefinite"
+        />
+      </image>
+    </svg>
+  </div>
 </section>

@@ -40,6 +40,7 @@ async function fetchHTML() {
     timelineIntersectingLeft();
     timelineIntersectingRight();
     displayBubbles();
+    displayMore();
 }
 document.addEventListener("DOMContentLoaded", fetchHTML);
 
@@ -135,4 +136,17 @@ function displayOneletter() {
 
     // Kick off the typing sequence
     typeSequence();
+}
+
+function displayMore() {
+    const btn = document.querySelector(".read-more-btn");
+    const text = document.querySelector(".log-text");
+    btn.addEventListener("click", () => {
+        text.classList.toggle("expanded");
+        text.classList.toggle("collapsed");
+        btn.textContent =
+            text.classList.contains("expanded")
+                ? "Read Less"
+                : "Read More";
+    });
 }

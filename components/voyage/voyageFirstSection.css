@@ -63,9 +63,9 @@
 }
 .contact-btn {
     margin-top: 3rem;
-    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+    font-size: clamp(1.3rem, 2vw, 2rem);
     font-weight: 600;
-    padding:  20px;
+    padding:  30px 50px;
     position: relative;
     border-radius: 12px;
     overflow: hidden;
@@ -73,17 +73,17 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     font-family: "Pirata One", serif;
-    font-size: clamp(1rem, 1.3vw, 1.5rem);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #d4af37;
+    color: #FFD700;
     text-shadow:
         1px 1px 0 #3a2414,
         0 0 5px rgba(255,215,0,.3);
     animation: seaFloat 4s ease-in-out infinite;
     transform-origin: center center;
     filter: brightness(0.9);
+    z-index: 2;
 }
 .contact-btn:hover {
     transform: translateY(-2px);
@@ -115,4 +115,37 @@
             translateY(2px)
             rotate(-0.5deg);
     }
+}
+.map {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    bottom: -150px;
+}
+.route-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    filter:
+        blur(1px)
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.55)
+        );
+}
+.route-svg> path {
+    fill: none;
+    stroke: rgba(45, 20, 10, 0.95);
+    stroke-width: 2;
+    stroke-dasharray: 5 8;
+    stroke-linecap: round;
+}
+.treasure-x {
+    stroke: #4a2f1a;
+    stroke-width: 4;
+    stroke-linecap: round;
+    filter:
+        blur(0.3px)
+        drop-shadow(0 0 2px rgba(0,0,0,.3));
 }
