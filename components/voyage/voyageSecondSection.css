@@ -16,7 +16,7 @@
         transparent 80%,
         rgba(255,255,255,.05)
     ),
-    url("../../images/index/moonlitOcean.png");
+    url("../../images/index/moonlitOcean.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -81,7 +81,7 @@
     rgba(8,15,30,0.35),
     rgba(8,15,30,0.55)
     ),
-    url("../../images/index/worldMap.png");
+    url("../../images/index/worldMap.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;

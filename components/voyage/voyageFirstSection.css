@@ -19,7 +19,7 @@
             rgba(0,0,0,0.55),
             rgba(0,0,0,0.55)
         ),
-        url("../../images/index/map.png");
+        url("../../images/index/map.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -69,7 +69,7 @@
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    background-image: url("../../images/index/woodButton.png");
+    background-image: url("../../images/index/woodButton.webp");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     font-family: "Pirata One", serif;
