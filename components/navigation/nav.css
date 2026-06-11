@@ -30,7 +30,7 @@
     bottom: -8px;
     width: 100%;
     height: 15px;
-    background-image: url("../../images/nav/border.png");
+    background-image: url("../../images/nav/border.webp");
     background-size: contain;
     pointer-events: none;
     z-index: 2;
@@ -47,7 +47,7 @@
         rgba(255,180,50,.25),
         transparent 70%
     ),
-     url("../../images/nav/lamp.png");
+     url("../../images/nav/lamp.webp");
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 1;
