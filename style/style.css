@@ -3,11 +3,35 @@ body[data-page="voyage"] {
     background-image: unset;
 }
 body[data-page="voyage"]>.footer-section  {
-    background-image: url("../../images/index/footer/moonlight.png");
-    background-repeat: no-repeat;
+    background-image: url("../images/index/footer/moonlight.png");
+    background-repeat: repeat-y;
     background-size: 120% auto;
     background-position: center;
     position: relative;
+}
+body[data-page="voyage"]>.footer-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60%;
+    background:
+        repeating-linear-gradient(
+            transparent 0px,
+            rgba(255,255,255,.035) 8px,
+            transparent 16px
+        );
+    animation: oceanApproach 15s linear infinite;
+    pointer-events: none;
+}
+@keyframes oceanApproach {
+    from {
+        background-position-y: 0;
+    }
+    to {
+        background-position-y: 130px;
+    }
 }
 body[data-page="profile"] {
     background-image:
