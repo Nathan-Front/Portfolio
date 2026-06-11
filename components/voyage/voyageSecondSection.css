@@ -131,14 +131,14 @@
     position: absolute;
 }
 .padding-top{
-    background-image: url("../../images/index/timeline/cave.png");
+    background-image: url("../../images/index/timeline/cave.webp");
     background-size: 110% 100%;
     background-position: left;
     background-repeat: no-repeat;
     
 }
 .padding-bottom{
-    background-image: url("../../images/index/timeline/cave2.png");
+    background-image: url("../../images/index/timeline/cave2.webp");
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -194,7 +194,7 @@
         rgba(0,0,0,0.3),
         rgba(0,0,0,0.3)
     ),
-    url("../../images/index/timeline/burntWood.png");
+    url("../../images/index/timeline/burntWood.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -215,7 +215,7 @@
     top: 98%;
     width: clamp(40px, 5vw, 80px);
     height: clamp(40px, 5vw, 80px);
-    background-image: url("../../images/index/timeline/anchorRope.png");
+    background-image: url("../../images/index/timeline/anchorRope.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -265,7 +265,7 @@
             rgba(0,0,0,0.65),
             rgba(0,0,0,0.65)
     ),
-    url("../../images/index/timeline/noticeBoard.png");
+    url("../../images/index/timeline/noticeBoard.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -430,7 +430,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("../../images/index/timeline/frameBorder.png");
+    background-image: url("../../images/index/timeline/frameBorder.webp");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     pointer-events: none;
