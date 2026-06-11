@@ -38,7 +38,7 @@
 .navbar::before {
     content: "";
     position: absolute;
-    right: -20px;
+    right: -23px;
     top: 99%;
     width: clamp(7rem, 12vw, 30rem);
     height: clamp(7rem, 12vw, 30rem);

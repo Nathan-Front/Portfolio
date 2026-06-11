@@ -1,21 +1,21 @@
 
 .footer-section {
-    padding: 50px 0;
+    padding: 50px 0 50px 0;
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: rgba(27, 73, 101, 0.5);
     color: #e2e8f0;
     font-family: "VT323", monospace;
     overflow-x: hidden;
     position: relative;
     z-index: 9;
+
 }
 .footer-content {
     padding: 10px 0;
     display: flex;
     width: max-content;
-    animation: marquee 20s linear infinite;
+    animation: marquee 30s linear infinite;
     overflow-x: hidden;
 }
 .marquee-container {
@@ -40,7 +40,7 @@
     color: #e2e8f0;
     gap: 6px;
 }
-.marquee-container> div> a > img {
+.marquee-container> div> a> img {
     width: 30px;
 }
 .footer-content:hover {

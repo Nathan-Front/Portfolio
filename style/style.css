@@ -2,6 +2,13 @@
 body[data-page="voyage"] {
     background-image: unset;
 }
+body[data-page="voyage"]>.footer-section  {
+    background-image: url("../../images/index/footer/moonlight.png");
+    background-repeat: no-repeat;
+    background-size: 120% auto;
+    background-position: center;
+    position: relative;
+}
 body[data-page="profile"] {
     background-image:
         linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
@@ -11,10 +18,15 @@ body[data-page="profile"] {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
+body[data-page="profile"]>.footer-section  {
+    background-color: rgba(27, 73, 101, 0.5);
+}
 body[data-page="contact"] {
     background-image: url("../images/contact/contact.png");
     margin-top: 100px;
+}
+body[data-page="contact"]>.footer-section {
+    background-color: rgba(27, 73, 101, 0.5);
 }
 body {
     font-family: 'Inter', sans-serif;

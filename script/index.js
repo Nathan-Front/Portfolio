@@ -15,6 +15,7 @@ async function fetchHTML() {
         const section = await Promise.all([
             fetch("./components/voyage/voyageFirstSection.html").then(res => res.text()),
             fetch("./components/voyage/voyageSecondSection.html").then(res => res.text()),
+            fetch("./components/voyage/backToTop.html").then(res => res.text()),
         ])
         section.forEach(sec => app.insertAdjacentHTML("beforeend", sec));
     }
@@ -39,8 +40,9 @@ async function fetchHTML() {
     displayOneletter();
     timelineIntersectingLeft();
     timelineIntersectingRight();
-    displayBubbles();
     displayMore();
+    boatTimeline();
+    backToTop();
 }
 document.addEventListener("DOMContentLoaded", fetchHTML);
 
@@ -139,14 +141,74 @@ function displayOneletter() {
 }
 
 function displayMore() {
-    const btn = document.querySelector(".read-more-btn");
-    const text = document.querySelector(".log-text");
-    btn.addEventListener("click", () => {
-        text.classList.toggle("expanded");
-        text.classList.toggle("collapsed");
-        btn.textContent =
-            text.classList.contains("expanded")
-                ? "Read Less"
-                : "Read More";
+    const logSections = document.querySelectorAll(".log-section");
+    logSections.forEach(section => {
+        const btn = section.querySelector(".read-more-btn");
+        const text = section.querySelector(".log-text");
+        const readMore = section.querySelector(".read-more-btn");
+        btn.addEventListener("click", () => {
+            if (text.classList.contains("expanded")) {
+                text.style.maxHeight = "4.5rem";
+                text.classList.remove("expanded");
+                readMore.classList.remove("ON");
+                readMore.textContent = "Read more";
+            } else {
+                text.style.maxHeight = text.scrollHeight + "px";
+                text.classList.add("expanded");
+                readMore.classList.add("ON");
+                readMore.textContent = "Read less";
+            }
+        });
+    });
+}
+
+function boatTimeline() {
+    const boatContainer = document.querySelector(".voyage-ship");
+    const boat = document.querySelector(".boat");
+    const progressBar = document.querySelector(".timeline-progress-bar");
+    let lastScrollY = window.scrollY;
+    window.addEventListener("scroll", () => {
+        const currentScrollY = window.scrollY;
+        const scrollPercent = currentScrollY /
+            (document.body.scrollHeight - window.innerHeight);
+        boatContainer.style.top = `${50 + scrollPercent}vh`;
+        if (currentScrollY > lastScrollY) {
+            boat.style.transform = "rotate(0deg)";
+            boatContainer.classList.add("down");
+            boatContainer.classList.remove("up");
+            progressBar.classList.add("down");
+            progressBar.classList.remove("up");
+        } else {
+            boat.style.transform = "rotate(180deg)";
+            boatContainer.classList.remove("down");
+            boatContainer.classList.add("up");
+            progressBar.classList.remove("down");
+            progressBar.classList.add("up");
+        }
+        lastScrollY = currentScrollY;
+    });
+}
+
+function backToTop() {
+    const backToTop = document.getElementById("backToTop");
+    let hideTimer;
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 2000) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+
+        clearTimeout(hideTimer);
+
+        hideTimer = setTimeout(() => {
+            backToTop.classList.remove("show");
+        }, 5000);
+    });
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     });
 }
