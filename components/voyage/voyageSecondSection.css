@@ -1,5 +1,6 @@
 
 .timeline-section {
+    width: 100%;
     position: relative;
     background:
     linear-gradient(
@@ -99,8 +100,8 @@
     pointer-events: none;
 }
 .timeline-upper-sub-inner-container {
-    width: 100vw;
-    margin-left: -150px;
+    width: 100%;
+    /*margin-left: -150px;*/
     margin-right: auto;
 }
 .padding-vertical {
@@ -109,7 +110,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 300px;
+   /* margin-left: 300px;*/
 }
 .timeline-upper-sub-inner-content {
     color: #000000;
@@ -132,10 +133,9 @@
 }
 .padding-top{
     background-image: url("../../images/index/timeline/cave.webp");
-    background-size: 110% 100%;
+    background-size: 100% 100%;
     background-position: left;
     background-repeat: no-repeat;
-    
 }
 .padding-bottom{
     background-image: url("../../images/index/timeline/cave2.webp");
@@ -203,10 +203,8 @@
         0 0 2px #000,
         0 0 4px #000,
         0 0 8px rgba(0,0,0,.6);
-
     transform: rotate(3deg);
     filter: drop-shadow(4px 8px 8px rgba(0,0,0,.6));
-    
 }
 .timeline-date::after {
     content: "";
@@ -346,6 +344,7 @@
 }
 .timeline-text> div {
     position: relative;
+    display: flex;
 }
 .log-text {
     overflow: hidden;
@@ -401,10 +400,10 @@
 .read-more-btn.ON {
     animation: unset;
     filter: brightness(1.3);
-        box-shadow:
-            0 0 5px rgba(212, 175, 55, 0.6),
-            0 0 8px rgba(212, 175, 55, 0.4),
-            0 0 10px rgba(212, 175, 55, 0.2);
+    box-shadow:
+        0 0 5px rgba(212, 175, 55, 0.6),
+        0 0 8px rgba(212, 175, 55, 0.4),
+        0 0 10px rgba(212, 175, 55, 0.2);
 }
 .timeline-text> div:nth-child(4) {
     margin-top: 1.5rem;
@@ -417,6 +416,8 @@
 }
 .timeline-image-wrap> p {
     margin-bottom: 1rem;
+    font-size: clamp(0.9rem, 1.1vw, 1.5rem);
+    font-weight: 600;
 }
 .timeline-image-wrap> a {
     width: clamp(280px, 60%, 800px);
@@ -488,7 +489,7 @@
     margin-left: -10px;
 }
 .voyage-ship{
-    width: clamp(50px, 4vw, 60px);
+    width: clamp(40px, 4vw, 60px);
     height:40px;
     position:absolute;
     left:55%;
@@ -605,8 +606,7 @@
     inset: auto 0% 0%;
     z-index: 2;
 }
-
-@media only screen and (max-width: 845px){
+@media only screen and (max-width: 845px) {
     .timeline-right{
         flex-direction: column;
         gap: 0;
@@ -619,7 +619,11 @@
     }
     .timeline-upper-sub-inner-container{
         margin: 0 auto;
-        width: 95%;
+        width: 100%;
+        padding: 1rem;
+    }
+    .timeline-upper-sub-inner-content> p {
+        width: 100%;
     }
     .padding-vertical{
         margin: 0;
@@ -647,6 +651,7 @@
     .timeline-left{
         text-align: left;
         grid-area: 1 / 2 / 2/ 3;
+        width: 55%;
     }
     .timeline-center{
         justify-content: flex-start;
@@ -669,11 +674,30 @@
     .timeline-text{
         font-size: 20px;
     }
+    .timeline-text> div:nth-child(3),
+    .timeline-text> div:nth-child(4),
+    .timeline-text> div:nth-child(5),
+    .timeline-text> div:nth-child(6) {
+        flex-direction: column;
+    }
     .timeline-progress{
         left: 18px;
     }
     .timeline-image-wrap> a {
-        width: 100%;
+        width: 50%;
+    }
+    .voyage-ship::after {
+        width: 70px;
+    }
+    .voyage-ship::before {
+        width: 30px;
+        height: 80px;
+    }
+    .voyage-ship.up::before{
+        bottom:-60px;
+    }
+    .voyage-ship.down::before{
+        top:-60px;
     }
 }
 @media (min-width: 846px) and (max-width: 960px){

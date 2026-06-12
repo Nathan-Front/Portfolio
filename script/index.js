@@ -43,22 +43,9 @@ async function fetchHTML() {
     displayMore();
     boatTimeline();
     backToTop();
+    openMobileNav();
 }
 document.addEventListener("DOMContentLoaded", fetchHTML);
-
-function toggleNavbar() {
-    const navbar = document.querySelector(".navbar");
-    let lastScrollY = window.scrollY;
-    window.addEventListener("scroll", () => {
-    const currentScrollY = window.scrollY;
-    if (currentScrollY > lastScrollY) {
-        navbar.classList.add("hide");
-    } else {
-        navbar.classList.remove("hide");
-    }
-    lastScrollY = currentScrollY;
-    });
-}
 
 function timelineIntersecting() {
     const dates = document.getElementById("my-journey");
@@ -191,6 +178,7 @@ function boatTimeline() {
 
 function backToTop() {
     const backToTop = document.getElementById("backToTop");
+    if(!backToTop) return;
     let hideTimer;
     window.addEventListener("scroll", () => {
         if (window.scrollY > 2000) {

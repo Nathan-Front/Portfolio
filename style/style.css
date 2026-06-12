@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 body[data-page="voyage"] {
     background-image: unset;
+    width: 100%;
 }
 body[data-page="voyage"]>.footer-section  {
     background-image: url("../images/footer/moonlight.webp");
     background-repeat: repeat-y;
-    background-size: 120% auto;
+    background-size: 100% auto;
     background-position: center;
     position: relative;
 }
@@ -15,7 +16,7 @@ body[data-page="voyage"]>.footer-section::after {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 60%;
+    height: 55%;
     background:
         repeating-linear-gradient(
             transparent 0px,
@@ -36,7 +37,7 @@ body[data-page="voyage"]>.footer-section::after {
 body[data-page="profile"] {
     background-image:
         linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
-        url("../images/cv/background.png");
+        url("../images/cv/background.webp");
     background-blend-mode:multiply;
    
     background-repeat: no-repeat;
@@ -46,14 +47,14 @@ body[data-page="profile"]>.footer-section  {
     background-color: rgba(27, 73, 101, 0.5);
 }
 body[data-page="contact"] {
-    background-image: url("../images/contact/contact.png");
+    background-image: url("../images/contact/contact.webp");
     margin-top: 100px;
 }
 body[data-page="contact"]>.footer-section {
     background-color: rgba(27, 73, 101, 0.5);
 }
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Pirata One", serif;
     margin: 0;
     padding: 0;
     position: relative;
@@ -62,16 +63,18 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     min-height: 100vh;
+    width: 100%;
+    min-width: 100%;
 }
 @media only screen and (max-width: 640px) {
     body[data-page="profile"] {
-        background-image: url("../images/cv/mobileBackground.png");
+        background-image: url("../images/cv/mobileBackground.webp");
     }
     body[data-page="contact"] {
-        background-image: url("../images/cv/mobileBackground.png");;
+        background-image: url("../images/cv/mobileBackground.webp");
     }
     body {
-        background-image: url("../images/cv/mobileBackground.png");
+        background-image: url("../images/cv/mobileBackground.webp");
     }
 }
 h1, h2, h3, h4 {
@@ -87,7 +90,7 @@ h1 {
 }
 .split-reveal {
   position: relative;
-  color: transparent; /*Hide original text*/
+  color: transparent; 
   display: inline-block;
 }
 .split-reveal::before,
@@ -107,17 +110,13 @@ h1 {
   animation-fill-mode: forwards;
 }
 .split-reveal::before {
-  /*keep only the top 50%*/
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-  /*Start shifted upward and invisible*/
   opacity: 0;
   transform: translateY(-50px);
   animation-name: splitFromTop;
 }
 .split-reveal::after {
-  /*keep only the bottom 50%*/
   clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
-  /*Start shifted downward and invisible*/
   opacity: 0;
   transform: translateY(50px);
   animation-name: splitFromBottom;

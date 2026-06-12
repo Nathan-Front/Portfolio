@@ -8,14 +8,19 @@
     display: flex;
     flex-direction: column;
 }
+.contact-left-container-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 .contact-left-container-title> h2 {
     text-align: center;
     font-family: "Pirata One", serif;
 }
 .contact-left-container-title> img {
-    width: 100%;
+    width: 70%;
     height: 25px;
-    margin: 10px 0;
+    margin: 8px auto;
 }
 .contact-left-container> form {
     padding: 1rem;
@@ -74,7 +79,7 @@ textarea::placeholder {
     height: 9vh;
     border: none;
     background-color: transparent;
-    background-image: url("../../images/contact/bottleMessage2.png");
+    background-image: url("../../images/contact/bottleMessage.webp");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     font-family: "Pirata One", serif;
@@ -84,7 +89,7 @@ textarea::placeholder {
     align-items: center;
     
     animation: floatWave 3s ease-in-out infinite;
-    filter: brightness(0.9);
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.6));
 }
 .send-button:hover {
     transform: translateY(-2px);
@@ -112,7 +117,7 @@ textarea::placeholder {
 
 .contact-right-container {
     width: 40%;
-    background-image: url("../../images/contact/bulletin.png");
+    background-image: url("../../images/contact/bulletin.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -154,7 +159,7 @@ textarea::placeholder {
     font-family: "Pirata One", serif;
     color: #1C1C1C;
     text-shadow: 0 0 8px rgba(212,175,55,.5);
-    font-size: clamp(0.7rem, 1vw, 1rem);
+    font-size: clamp(0.8rem, 1.1vw, 1rem);
 }
 .contact-right-container> ul> li> div> p {
     font-family: "Pirata One", serif;
