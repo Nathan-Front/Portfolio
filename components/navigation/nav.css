@@ -141,9 +141,11 @@
 @media only screen and (max-width: 640px) {
     .navbar {
         width: 100% !important;
+        max-width:100%;
+        box-sizing:border-box;
     }
     .navbar::before {
-        right: 0;
+        right: -15px;
     }
     .logo {
         margin: 0 0 0 1rem;
@@ -152,6 +154,7 @@
         margin: 0 0 0 1rem;
     }
     .nav-links-wrapper {
+        position: absolute !important;
         flex-direction: column;
         width: 80% !important;
         height: 100vh;

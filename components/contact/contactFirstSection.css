@@ -16,7 +16,7 @@
     gap: 1rem;
 }
 .contact-first-section-images> img {
-    width: clamp(32px, 5vw, 80px);
+    width: clamp(50px, 5vw, 80px);
 }
 .contact-first-section-images> img:first-child {
     transform:scaleY(-1)  rotate(-90deg);
@@ -55,4 +55,10 @@
 }
 .contact-first-section> p {
     font-family: "Pirata One", serif;
+}
+@media only screen and (max-width: 640px) {
+    .contact-first-section {
+        width: 100%;
+        margin: 2rem auto 0 auto;
+    }
 }

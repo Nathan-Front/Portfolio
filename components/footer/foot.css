@@ -13,7 +13,7 @@
 .footer-content {
     padding: 10px 0;
     display: flex;
-    width: max-content;
+    width:max-content;
     animation: marquee 30s linear infinite;
     overflow-x: hidden;
 }
@@ -24,9 +24,15 @@
     gap: 3rem;
     flex-shrink: 0;
     padding: 0 40px;
+    
 }
 .marquee-container> h3 {
-    font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+    font-size: clamp(1.1rem, 1.5vw, 1.6rem);
+    letter-spacing: 1px;
+}
+.marquee-container> p {
+    font-family: "Pirata One", serif;
+    letter-spacing: 1px;
 }
 .contact-info {
     display: flex;
@@ -37,6 +43,7 @@
     align-items: center;
     color: #e2e8f0;
     gap: 6px;
+    letter-spacing: 1px;
 }
 .marquee-container> div> a> img {
     width: 30px;
@@ -56,6 +63,10 @@
     width: 100%;
     text-align: center;
 }
+.copyright {
+    font-family: "Pirata One", serif;
+    letter-spacing: 2px;
+}
 .alrights-reserved> img {
     width: 10%;
     animation: oceanFloat 6s ease-in-out infinite;
@@ -67,19 +78,13 @@
 }
 .alrights-reserved> img::after {
     content: "";
-
     position: absolute;
-
     left: 50%;
     bottom: 10px;
-
     width: 120px;
     height: 30px;
-
     transform: translateX(-50%);
-
     border-radius: 50%;
-
     background:
         radial-gradient(
             ellipse,
@@ -101,21 +106,14 @@
 }
 .alrights-reserved> img::before {
     content: "";
-
     position: absolute;
-
     left: 50%;
     bottom: -5px;
-
     width: 100px;
     height: 20px;
-
     transform: translateX(-50%);
-
     background: rgba(0,0,0,.4);
-
     border-radius: 50%;
-
     filter: blur(8px);
 }
 @keyframes oceanFloat {
