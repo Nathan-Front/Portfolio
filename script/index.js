@@ -181,6 +181,7 @@ function boatTimeline() {
     const boatContainer = document.querySelector(".voyage-ship");
     const boat = document.querySelector(".boat");
     const progressBar = document.querySelector(".timeline-progress-bar");
+    if(!boatContainer || !boat || !progressBar) return;
     let lastScrollY = window.scrollY;
     window.addEventListener("scroll", () => {
         const currentScrollY = window.scrollY;
