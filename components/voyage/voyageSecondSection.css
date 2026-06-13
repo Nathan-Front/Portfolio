@@ -54,7 +54,7 @@
 }
 #my-journey {
     margin-bottom: 1rem;
-    font-size: clamp(2.5rem, 4vw, 5rem);
+    font-size: clamp(1.8rem, 4vw, 5rem);
     letter-spacing: 2px;
     color: #df9e51;
     text-shadow:
@@ -107,7 +107,6 @@
 }
 .timeline-upper-sub-inner-container {
     width: 100%;
-    /*margin-left: -150px;*/
     margin-right: auto;
 }
 .padding-vertical {
@@ -116,7 +115,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   /* margin-left: 300px;*/
 }
 .timeline-upper-sub-inner-content {
     color: #000000;
@@ -185,11 +183,11 @@
     transform: translateX(0);
     opacity: 1;
 }
-.timeline-center{
+.timeline-center {
     justify-content: center;
     display: flex;
 }
-.timeline-date{
+.timeline-date {
     position: sticky;
     top: 50vh;
     padding: 1rem;
@@ -462,17 +460,17 @@
     transform: scale(1.05);
     filter: brightness(1.1);
 }
-.timeline-progress{
+.timeline-progress {
     z-index: 1;
     width: 60px;
     height: 100vh;
     position: absolute;
     left: 379.5px;
-    display:flex;
-    justify-content:center;
+    display: flex;
+    justify-content: center;
 }
 .timeline-progress-bar{
-    position:fixed;
+    position: fixed;
     inset:0 auto 30vh;
     box-shadow:
         0 0 10px rgba(103,232,249,.5),
@@ -480,10 +478,10 @@
 }
 .timeline-progress-bar::after {
     content: "";
-    width:3px;
-    height:50vh;
-    position:fixed;
-    inset:0 auto 30vh;
+    width: 3px;
+    height: 50vh;
+    position: fixed;
+    inset: 0 auto 30vh;
     box-shadow:
         0 0 10px rgba(103,232,249,.5),
         0 0 25px rgba(103,232,249,.3); 
@@ -494,8 +492,8 @@
 .timeline-progress-bar.up::after {
     margin-left: -10px;
 }
-.voyage-ship{
-    width: clamp(40px, 4vw, 60px);
+.voyage-ship {
+    width: clamp(30px, 4vw, 60px);
     height:40px;
     position:absolute;
     left:55%;
@@ -507,7 +505,7 @@
     animation: rock 3s ease-in-out infinite;
     --beam-rotation: 0deg;
 }
-.voyage-ship::after{
+.voyage-ship::after {
     content:"";
     position:absolute;
     width:120px;
@@ -533,12 +531,12 @@
     transform: translateX(-50%) rotate(var(--beam-rotation));
     animation: moonlight-shimmer 4s ease-in-out infinite;
 }
-.voyage-ship.up::after{
+.voyage-ship.up::after {
     top:-200px;
     bottom:auto;
      --beam-rotation: 0deg;
 }
-.voyage-ship.down::after{
+.voyage-ship.down::after {
     top:auto;
     bottom:-200px;
     --beam-rotation: 180deg;
@@ -559,7 +557,7 @@
             scaleX(1.15);
     }
 }
-.voyage-ship::before{
+.voyage-ship::before {
     content:"";
     position:absolute;
     left:55%;
@@ -597,7 +595,7 @@
     50%{
         transform:rotate(1deg) translateX(-70%);
     }
-}
+}/*
 .overlay-fade-top{
     background-image: linear-gradient(#ffffff, #ffffff);
     height: 72px;
@@ -611,8 +609,11 @@
     position: absolute;
     inset: auto 0% 0%;
     z-index: 2;
-}
+}*/
 @media only screen and (max-width: 845px) {
+    .timeline-upper-container {
+        padding: 30px 0;
+    }
     .timeline-right{
         flex-direction: column;
         gap: 0;
@@ -625,11 +626,16 @@
     }
     .timeline-upper-sub-inner-container{
         margin: 0 auto;
+        width: 90%;
+        padding: 0;
+    }
+    .timeline-upper-sub-inner-content {
         width: 100%;
-        padding: 1rem;
+        padding: 1rem 0;
     }
     .timeline-upper-sub-inner-content> p {
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
     }
     .padding-vertical{
         margin: 0;
@@ -657,7 +663,7 @@
     .timeline-left{
         text-align: left;
         grid-area: 1 / 2 / 2/ 3;
-        width: 55%;
+        width: 80%;
     }
     .timeline-center{
         justify-content: flex-start;
@@ -687,7 +693,10 @@
         flex-direction: column;
     }
     .timeline-progress{
-        left: 18px;
+        left: 5px;
+    }
+    .timeline-progress-bar::after {
+        left: 40px;
     }
     .timeline-image-wrap> a {
         width: 50%;

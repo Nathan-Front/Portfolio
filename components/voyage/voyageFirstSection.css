@@ -24,7 +24,6 @@
     background-position: center;
     background-repeat: no-repeat;
     z-index: -2;
-    
 }
 .about-section::after {
     content: "";
@@ -63,7 +62,7 @@
 }
 .contact-btn {
     margin-top: 3rem;
-    font-size: clamp(1.3rem, 2vw, 2rem);
+    font-size: clamp(1.1rem, 2vw, 2rem);
     font-weight: 600;
     padding:  30px 50px;
     position: relative;
@@ -93,27 +92,16 @@
 }
 @keyframes seaFloat{
     0%,100%{
-        transform:
-            translateY(0)
-            rotate(-1deg);
+        transform: translateY(0) rotate(-1deg);
     }
-
     25%{
-        transform:
-            translateY(-3px)
-            rotate(0.5deg);
+        transform: translateY(-3px) rotate(0.5deg);
     }
-
     50%{
-        transform:
-            translateY(-1px)
-            rotate(1deg);
+        transform: translateY(-1px) rotate(1deg);
     }
-
     75%{
-        transform:
-            translateY(2px)
-            rotate(-0.5deg);
+        transform: translateY(2px) rotate(-0.5deg);
     }
 }
 .map {
@@ -150,14 +138,26 @@
         drop-shadow(0 0 2px rgba(0,0,0,.55));
 }
 @media only screen and (max-width: 640px) {
+    .about-section {
+        height: 70%;
+        min-height: 500px;
+    }
     .about-section::before{
+        content: "";
         background-size: 100% 100%;
     }   
+    .map {
+        height: 400px;
+        bottom: -100px;
+    }
+    .split-reveal {
+        margin-top: 5rem;
+    }
     .about-section> p {
         max-width: 80%;
     }
     .contact-btn {
         margin-top: 1rem;
-        padding: 15px 20px;
+        padding: 10px 15px;
     }
 }
