@@ -154,3 +154,26 @@ p {
     line-height: 1.3;
     font-family: 'Merriweather', serif;
 }
+.loading,
+.error-page {
+    min-height: 50vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:#d4af37;
+    font-family:serif;
+}
+.spinner {
+    width:60px;
+    height:60px;
+    border:5px solid rgba(212,175,55,.3);
+    border-top-color:#d4af37;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+@keyframes spin {
+    to {
+        transform:rotate(360deg);
+    }
+}

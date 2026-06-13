@@ -1,49 +1,77 @@
 
 async function fetchHTML() {
     const page = document.body.dataset.page;
-     const app = document.getElementById("app");
-     const body = document.body;
-     const [
-        nav,
-        foot,
-    ] = await Promise.all([
-        fetch("./components/navigation/nav.html").then(res => res.text()),
-        fetch("./components/footer/foot.html").then(res => res.text()),
-    ])
-    body.insertAdjacentHTML("beforeend", nav);
-    if (page === "voyage") {
-        const section = await Promise.all([
-            fetch("./components/voyage/voyageFirstSection.html").then(res => res.text()),
-            fetch("./components/voyage/voyageSecondSection.html").then(res => res.text()),
-            fetch("./components/voyage/backToTop.html").then(res => res.text()),
-        ])
-        section.forEach(sec => app.insertAdjacentHTML("beforeend", sec));
+    const app = document.getElementById("app");
+    const body = document.body;
+    //Content fallback
+    app.innerHTML = `
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>Loading your voyage...</p>
+        </div>
+    `;
+    try {
+        const [
+            nav,
+            foot,
+        ] = await Promise.all([
+            fetch("./components/navigation/nav.html").then(res => {
+                if (!res.ok) throw new Error("Navigation failed");
+                return res.text();
+            }),
+            fetch("./components/footer/foot.html").then(res => {
+                if (!res.ok) throw new Error("Footer failed");
+                return res.text();
+            }),
+        ]);
+        body.insertAdjacentHTML("beforeend", nav);
+        let sections = [];
+        if (page === "voyage") {
+            sections = await Promise.all([
+                fetch("./components/voyage/voyageFirstSection.html").then(res => res.text()),
+                fetch("./components/voyage/voyageSecondSection.html").then(res => res.text()),
+                fetch("./components/voyage/backToTop.html").then(res => res.text()),
+            ]);
+        }
+        if (page === "profile") {
+            sections = await Promise.all([
+                fetch("./components/profile/profileFirstSection.html").then(res => res.text()),
+                fetch("./components/profile/profileSecondSection.html").then(res => res.text()),
+            ]);
+        }
+        if (page === "contact") {
+            sections = await Promise.all([
+                fetch("./components/contact/contactFirstSection.html").then(res => res.text()),
+                fetch("./components/contact/contactSecondSection.html").then(res => res.text()),
+            ]);
+        }
+        //remove loading screen
+        app.innerHTML = "";
+        //add page content
+        sections.forEach(sec => {app.insertAdjacentHTML("beforeend", sec);});
+        body.insertAdjacentHTML("beforeend", foot);
+        toggleNavbar();
+        timelineIntersecting();
+        flyText();
+        displayOneletter();
+        timelineIntersectingLeft();
+        timelineIntersectingRight();
+        displayMore();
+        boatTimeline();
+        backToTop();
+        openMobileNav();
+    } catch(error) {
+        console.error(error);
+        app.innerHTML = `
+            <div class="error-page">
+                <h2>The ship hit a storm!</h2>
+                <p>Unable to load the page.</p>
+                <button onclick="location.reload()">
+                    Try Again
+                </button>
+            </div>
+        `;
     }
-    if (page === "profile") {
-        const section = await Promise.all([
-            fetch("./components/profile/profileFirstSection.html").then(res => res.text()),
-            fetch("./components/profile/profileSecondSection.html").then(res => res.text()),
-        ])
-        section.forEach(sec => app.insertAdjacentHTML("beforeend", sec));
-    }
-    if (page === "contact") {
-        const section = await Promise.all([
-            fetch("./components/contact/contactFirstSection.html").then(res => res.text()),
-            fetch("./components/contact/contactSecondSection.html").then(res => res.text()),
-        ])
-        section.forEach(sec => app.insertAdjacentHTML("beforeend", sec));
-    }
-    body.insertAdjacentHTML("beforeend", foot);
-    toggleNavbar();
-    timelineIntersecting();
-    flyText(); 
-    displayOneletter();
-    timelineIntersectingLeft();
-    timelineIntersectingRight();
-    displayMore();
-    boatTimeline();
-    backToTop();
-    openMobileNav();
 }
 document.addEventListener("DOMContentLoaded", fetchHTML);
 
