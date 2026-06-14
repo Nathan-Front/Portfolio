@@ -285,7 +285,7 @@
     gap: 3px;
 }
 .timeline-text> h3> img {
-    width: 30%;
+    width: clamp(4rem, 50%, 8rem);
     filter:
         sepia(100%)
         saturate(300%)
@@ -304,7 +304,7 @@
     font-family: 'Merriweather', serif;  
 }
 .timeline-text> div> img {
-    width: 30%;
+    width: clamp(4rem, 50%, 8rem);
     filter:
         sepia(100%)
         saturate(300%)
@@ -691,18 +691,14 @@
         font-size: 20px;
         padding: 1rem;
     }
-     .timeline-text> h3,
-      .timeline-text> div:nth-child(2),
+    .timeline-text> h3,
+    .timeline-text> div:nth-child(2),
     .timeline-text> div:nth-child(3),
     .timeline-text> div:nth-child(4),
     .timeline-text> div:nth-child(5),
     .timeline-text> div:nth-child(6) {
         flex-direction: column;
         align-items: flex-start;
-    }
-    .timeline-text> h3> img, 
-    .timeline-text> div> img {
-        width: 50%;
     }
     .timeline-progress{
         left: 5px;
