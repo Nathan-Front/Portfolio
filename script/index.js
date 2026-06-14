@@ -65,7 +65,7 @@ async function fetchHTML() {
         app.innerHTML = `
             <div class="error-page">
                 <h2>The ship hit a storm!</h2>
-                <p>Unable to load the page.</p>
+                <p>Unable to set sail.</p>
                 <button onclick="location.reload()">
                     Try Again
                 </button>

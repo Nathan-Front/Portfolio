@@ -164,10 +164,11 @@
         margin-top: 5rem;
     }
     .about-section> p {
-        max-width: 80%;
+        max-width: 90%;
+        line-height: 1;
     }
     .contact-btn {
-        margin-top: 1rem;
+        margin-top: 0.75rem;
         padding: 15px;
     }
 }
