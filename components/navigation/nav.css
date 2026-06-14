@@ -40,8 +40,8 @@
     position: absolute;
     right: -23px;
     top: 99%;
-    width: clamp(7rem, 12vw, 30rem);
-    height: clamp(7rem, 12vw, 30rem);
+    width: clamp(5rem, 12vw, 30rem);
+    height: clamp(5rem, 12vw, 30rem);
     background-image:
     radial-gradient(
         rgba(255,180,50,.25),
@@ -139,6 +139,9 @@
     display: none;
 }
 @media only screen and (max-width: 640px) {
+    :root{
+        --nav-height: 70px;
+    }
     .navbar {
         width: 100% !important;
         max-width:100%;
