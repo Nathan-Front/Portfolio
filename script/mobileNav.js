@@ -1,7 +1,9 @@
+let mobileNavOpen = false;
 function toggleNavbar() {
     const navbar = document.querySelector(".navbar");
     let lastScrollY = window.scrollY;
     window.addEventListener("scroll", () => {
+    if (mobileNavOpen) return;
     const currentScrollY = window.scrollY;
     if (currentScrollY > lastScrollY) {
         navbar.classList.add("hide");
@@ -17,18 +19,23 @@ function openMobileNav() {
     const mobileNavContent = document.querySelector(".nav-links-wrapper");
     const closeBtn = document.querySelector(".close-mobile-nav");
     const overlay = document.querySelector(".overlay");
+    const navbar = document.querySelector(".navbar");
     openBtn.addEventListener("click", () => {
         mobileNavContent.classList.toggle("openNav");
         if (mobileNavContent.classList.contains("openNav")) {
-            document.body.classList.add("menu-open");
-            overlay.style = "display: flex";
+            document.documentElement.classList.toggle("no-scroll");
+            document.body.classList.toggle("no-scroll");
+            overlay.classList.add("overlayActive")
+            mobileNavOpen = true;
         }  
     });
     closeBtn.addEventListener("click", () => {
         if (mobileNavContent.classList.contains("openNav")) {
             mobileNavContent.classList.remove("openNav");
-            document.body.classList.remove("menu-open");
-            overlay.style = "display: none";
+            document.documentElement.classList.remove("no-scroll");
+            document.body.classList.remove("no-scroll");
+            overlay.classList.remove("overlayActive")
+            mobileNavOpen = false;
         }  
     })
 }

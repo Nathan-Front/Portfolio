@@ -138,6 +138,9 @@
 .overlay {
     display: none;
 }
+.main-title-container-mobile {
+    display: none !important;
+}
 @media only screen and (max-width: 640px) {
     :root{
         --nav-height: 70px;
@@ -266,31 +269,67 @@
         visibility: visible;
         pointer-events: auto;
         transform: translateX(0);
-        z-index: 9999;
+        z-index: 9999999;
         box-shadow:
         -15px 0 30px rgba(0,0,0,.7),
         inset 10px 0 30px rgba(0,0,0,.2);
         padding: 0;
         box-sizing:border-box;
     }
-    .menu-open {
-        overflow: hidden;
-        padding-right: 15px;
-    }
-    .overlay {
+    .overlayActive {
+        display: flex;
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
+        min-height: 100vh;
         inset:0;
         z-index: 999;
         background:
-       linear-gradient(
+        linear-gradient(
           90deg,
           rgba(0,0,0,.5),
           transparent
-       );
+        );
+        overflow-y: hidden;
+    }
+    body[data-page="profile"]> nav>.main-title-container-mobile  {
+        position: absolute;
+        display: flex !important;
+        justify-content: flex-start !important;
+        width: 50% !important;
+        left: 10px;
+        top: 65px;
+        padding: 1rem;
+        gap: 1rem;
+        background-image: url("../../images/cv/woodBanner.webp");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        transform-origin: top center;
+        animation: swayFrontBack 5s ease-in-out infinite;
+        filter: drop-shadow(0 10px 10px rgba(0,0,0,.25));
+    }
+    @keyframes swayFrontBack{
+        0%,100%{
+            transform: perspective(1200px) rotateX(4deg);
+            filter: drop-shadow(0 15px 12px rgba(0,0,0,.3));
+        }
+        50%{
+            transform: perspective(1200px) rotateX(-4deg);
+            filter: drop-shadow(0 5px 6px rgba(0,0,0,.15));
+        }
+    }
+    .main-title-container-mobile> h2 {
+        font-family: "Pirata One", serif;
+        font-size: clamp(1rem, 2vw, 2rem);
+        color: #d4af37;
+        text-shadow:
+            1px 1px 0 #3a2414,
+            0 0 5px rgba(255,215,0,.3);
+        margin: 15% auto 0 auto;
+        letter-spacing: 5px;
+        text-align: center;
     }
     .mobile-footer {
         display: flex;

@@ -62,6 +62,7 @@ body {
     padding: 0;
     position: relative;
     overflow-x: hidden;
+    overflow-y: auto;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -78,6 +79,10 @@ body {
     }
     body {
         background-image: url("../images/cv/mobileBackground.webp");
+    }
+    html.no-scroll,
+    body.no-scroll {
+        overflow: hidden;
     }
 }
 h1, h2, h3, h4 {
