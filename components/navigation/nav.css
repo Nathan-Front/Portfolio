@@ -322,7 +322,7 @@
     }
     .main-title-container-mobile> h2 {
         font-family: "Pirata One", serif;
-        font-size: clamp(1rem, 2vw, 2rem);
+        font-size: clamp(0.9rem, 2vw, 2rem);
         color: #d4af37;
         text-shadow:
             1px 1px 0 #3a2414,

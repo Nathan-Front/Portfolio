@@ -1,6 +1,4 @@
-h3{
-    font-family: "Cinzel", serif;
-}
+
 .profile-second-section {
     width: 75%;
     display: flex;
@@ -30,20 +28,12 @@ h3{
 }
 @keyframes swayFrontBack{
     0%,100%{
-        transform:
-            perspective(1200px)
-            rotateX(4deg);
-
-        filter:
-            drop-shadow(0 15px 12px rgba(0,0,0,.3));
+        transform: perspective(1200px) rotateX(4deg);
+        filter: drop-shadow(0 15px 12px rgba(0,0,0,.3));
     }
     50%{
-        transform:
-            perspective(1200px)
-            rotateX(-4deg);
-
-        filter:
-            drop-shadow(0 5px 6px rgba(0,0,0,.15));
+        transform: perspective(1200px) rotateX(-4deg);
+        filter: drop-shadow(0 5px 6px rgba(0,0,0,.15));
     }
 }
 .main-title-container > img {
@@ -75,7 +65,7 @@ h3{
 
     backdrop-filter: blur(2px);
     padding: 1.5rem;
-    transform:rotate(-0.4deg);
+    transform: rotate(-0.4deg);
 }
 .tack{
     position:absolute;
@@ -236,7 +226,6 @@ h3{
     top: 0;      
     bottom: 0;
     left: -21px;
-   
     background:
     radial-gradient(
         circle,
@@ -244,10 +233,12 @@ h3{
         burlywood 2px 3px,
         transparent 4px
     );
-
     background-size: 8px 16px;
     background-repeat: repeat-y;
     background-position: center;
+}
+.dates> img {
+    display: none;
 }
 .dates> p {
     margin: 20px 0 0 0;
@@ -256,6 +247,7 @@ h3{
     width: 70%;
     padding: 1rem;
     border: 2px burlywood solid;
+    background: rgba(255,245,220,.75);
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -323,11 +315,11 @@ h3{
     height: clamp(28px, 4vw, 40px);
 }
 .academy-section> ul> li> span {
-    font-size: clamp(0.7rem, 1.3vw, 1.2rem);
+    font-size: clamp(0.8rem, 1.3vw, 1.2rem);
     color: #0A2540;
 }
 .academy-section> ul> li> p {
-    font-size: clamp(1.1rem, 1.2vw, 1.5rem);
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
     color: #0A2540;
 }
 .explore-section {
@@ -511,7 +503,7 @@ h3{
         align-items: center;
     }
     .profile-second-section> div {
-        width: 80%;
+        width: 75%;
     }
     .main-title-container {
         display: none;
@@ -537,18 +529,68 @@ h3{
     .sub-title> ul> li:last-child {
         margin-bottom: 1rem;
     }
+    .about-me-container,
+    .voyage-timeline,
+    .explore-section {
+        transform: rotate(0);
+    }
+    .voyage-section {
+        width: 100%;
+        flex-direction: column;
+    }
     .dates::before,
     .dates::after {
         display: none;
     }
     .dates {
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+        width: 100%;
         margin-left: 0;
+        text-align: left;
+    }
+    .dates> img {
+        display: flex;
+        width: 40px;
+        height: 40px;
     }
     .dates> p {
         margin: 0;
+        font-size: 1rem;
+    }
+    .details {
+        width: 100%;
+        padding: 0;
+    }
+    .details> div {
+        width: 90%;
+        margin: 5% 0 0 5%;
+    }
+    .details> ul {
+        width: 90%;
+        margin: 0 0 5% 5%;
+    }
+    .details> ul> li {
+        width: 100%;
+    }
+    .explore-list {
+        width: 90%;
+        margin: 0 auto;
+        gap: 2rem;
     }
     .explore-list> li {
-        margin-bottom: 0;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .explore-list> li> img,
+    .explore-list> li> h4,
+    .language {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .explore-list> li> a {
+        margin-left: 3%;
     }
     .logbook-link {
         margin-bottom: 0;
