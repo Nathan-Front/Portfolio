@@ -98,49 +98,49 @@ h1 {
     margin-bottom: 1rem;
 }
 .split-reveal {
-  position: relative;
-  color: transparent; 
-  display: inline-block;
+    position: relative;
+    color: transparent; 
+    display: inline-block;
 }
 .split-reveal::before,
 .split-reveal::after {
-  content: attr(data-text); /*Use the text of data- instead*/
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #B87333;
-  text-shadow:
+    content: attr(data-text); /*Use the text of data- instead*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #B87333;
+    text-shadow:
         1px 1px 0 #3a2414,
         0 0 5px rgba(255,215,0,.3);
-  animation-duration: 1.5s;
-  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); 
-  animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); 
+    animation-fill-mode: forwards;
 }
 .split-reveal::before {
-  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-  opacity: 0;
-  transform: translateY(-50px);
-  animation-name: splitFromTop;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    opacity: 0;
+    transform: translateY(-50px);
+    animation-name: splitFromTop;
 }
 .split-reveal::after {
-  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
-  opacity: 0;
-  transform: translateY(50px);
-  animation-name: splitFromBottom;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    opacity: 0;
+    transform: translateY(50px);
+    animation-name: splitFromBottom;
 }
 @keyframes splitFromTop {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 @keyframes splitFromBottom {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 ul {
     list-style: none;
