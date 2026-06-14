@@ -229,3 +229,12 @@ function backToTop() {
         });
     });
 }
+
+/*
+const form = document.querySelector("form");
+const button = document.querySelector(".send-button");
+
+form.addEventListener("submit", () => {
+    button.classList.add("loading");
+    button.disabled = true;
+});*/

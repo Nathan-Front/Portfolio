@@ -32,7 +32,7 @@
 }
 .contact-first-section-title> h1 {
     font-family: "Pirata One", serif;
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.8rem, 5vw, 3rem);
     letter-spacing: 2px;
     background:
         linear-gradient(
