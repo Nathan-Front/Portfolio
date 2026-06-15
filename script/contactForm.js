@@ -2,9 +2,19 @@ function sendMessage() {
     const form = document.querySelector("#contact-form");
     if (!form) return; //Prevent sending blank form to emailJS when loading the page
     const sendBtn = document.querySelector(".send-button");
+    let lastSent = 0;
     form.addEventListener("submit", async (event) => {
         event.preventDefault();
-        //const button = form.querySelector(".send-button");
+        const trap = form.querySelector(".honeypot");
+        if (trap.value !== "") {
+            return;
+        }
+        const now = Date.now();
+        if (now - lastSent < 30000) {
+            alert("Please wait before sending another bottle!");
+            return;
+        }
+        lastSent = now;
         sendBtn.disabled = true;
         const spinner = form.querySelector(".spinner");
         spinner.classList.add("activeSpinner");
@@ -15,11 +25,8 @@ function sendMessage() {
             message: document.querySelector("#fmessage").value,
         };
         try {
-            //send message to you
             await emailjs.send("service_xpzqxxe", "template_0k389n9", templateParams);
-            //Use this if did not setup auto reply in EmailJS dashboard
-            //await emailjs.send("service_ID", "template_ID", templateParams);
-            alert("Bottle sent! 🚢\n\nCheck your email for new voyage.");
+            alert("Bottle sent! \n\nCheck your email for new voyage.");
             form.reset();
         } catch (error) {
             console.log("FAILED...", error);
@@ -29,5 +36,4 @@ function sendMessage() {
             sendBtn.disabled = false;
         }
     });
-    
 }

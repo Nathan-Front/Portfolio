@@ -184,6 +184,10 @@ textarea::placeholder {
     font-family: "Pirata One", serif;
     font-size: clamp(0.8rem, 1.1vw, 1.2rem);
 }
+.honeypot {
+    position:absolute;
+    left:-9999px;
+}
 @media only screen and (max-width: 640px) {
     .contact-second-section {
         width: 100%;
