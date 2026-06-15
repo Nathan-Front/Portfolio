@@ -16,11 +16,24 @@
       href="./components/contact/contactSecondSection.css"
     />
     <title>Drop Anchor</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        //https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "BSWCWEqK2ECv6Fehh",
+        });
+      })();
+    </script>
   </head>
   <body data-page="contact">
     <main id="app"></main>
     <script src="./script/index.js" defer></script>
     <script src="./script/timeline.js" defer></script>
     <script src="./script/mobileNav.js" defer></script>
+    <script src="./script/contactForm.js" defer></script>
   </body>
 </html>

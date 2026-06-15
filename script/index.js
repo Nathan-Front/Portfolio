@@ -60,6 +60,9 @@ async function fetchHTML() {
         boatTimeline();
         backToTop();
         openMobileNav();
+        if (page === "contact") {
+            sendMessage();
+        }
     } catch(error) {
         console.error(error);
         app.innerHTML = `
@@ -229,12 +232,3 @@ function backToTop() {
         });
     });
 }
-
-/*
-const form = document.querySelector("form");
-const button = document.querySelector(".send-button");
-
-form.addEventListener("submit", () => {
-    button.classList.add("loading");
-    button.disabled = true;
-});*/
