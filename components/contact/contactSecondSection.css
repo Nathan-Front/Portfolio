@@ -188,6 +188,9 @@ textarea::placeholder {
     position:absolute;
     left:-9999px;
 }
+#fmail.error {
+    border: 2px solid #ff4d4d;
+}
 @media only screen and (max-width: 640px) {
     .contact-second-section {
         width: 100%;
