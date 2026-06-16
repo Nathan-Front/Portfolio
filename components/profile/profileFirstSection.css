@@ -86,11 +86,11 @@
     );
 }
 .info-container {
-    width: 100%;
-    margin-top: 10px;
+    width: 80%;
     display: flex;
     flex-direction: column;
     gap: 5px;
+    color: white;
 }
 .info-container> li {
     display: flex;
@@ -101,6 +101,7 @@
 }
 .info-container> li> p {
     font-size: clamp(0.8rem, 1vw, 1.2rem);
+   
 }
 .contact-container> li> a {
     font-family: 'Merriweather', serif;
@@ -116,6 +117,11 @@
 .portfolio-container,
 .language-container {
     width: 80%;
+}
+.info-container,
+.contact-container,
+.portfolio-container,
+.language-container {
     margin: 3rem auto 0 auto;
     display: flex;
     flex-direction: column;
@@ -130,6 +136,7 @@
         transparent 100%
     ) 1;
 }
+.info-container> li,
 .contact-container> li,
 .portfolio-container> li,
 .language-container> li {

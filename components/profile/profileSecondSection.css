@@ -31,12 +31,15 @@
     width: 60px;
     mix-blend-mode: multiply;
     opacity: 0.92;
-    filter: 
-        brightness(1) 
-        contrast(1) 
-        drop-shadow(2px 3px 4px rgba(40, 15, 5, 0.65));
-    transform: rotate(-4deg);
-
+    filter:
+    drop-shadow(0 2px 1px rgba(0,0,0,0.35))
+    drop-shadow(0 6px 8px rgba(0,0,0,0.25));
+    border-radius: 50%;
+    box-shadow:
+    inset 0 2px 3px rgba(255,255,255,0.25),
+    inset 0 -4px 8px rgba(0,0,0,0.4),
+    0 4px 10px rgba(0,0,0,0.3);
+    transform: rotate(8deg);
 }
 .about-me-container {
     display: flex;
@@ -57,8 +60,8 @@
     width:18px;
     height:18px;
     filter:
-        drop-shadow(0 2px 2px rgba(0,0,0,.4))
-        drop-shadow(0 4px 6px rgba(0,0,0,.2));
+    drop-shadow(0 2px 2px rgba(0,0,0,.4))
+    drop-shadow(0 4px 6px rgba(0,0,0,.2));
 }
 .tl{
     top:10px;
@@ -84,9 +87,16 @@
     align-items: center;
     gap: 1rem;
 }
-.about-me-container> h3> img {
+.profile-second-section> div> h3> img {
     width: clamp(32px, 5vw, 50px);
     height: clamp(32px, 5vw, 50px);
+    filter:
+    sepia(20%)
+    contrast(90%)
+    brightness(95%);
+    opacity: 0.55;
+    mix-blend-mode: multiply;
+    filter: sepia(30%) contrast(85%);
 }
 .about-me-container> p {
     line-height: 1.2;
@@ -113,10 +123,6 @@
     align-items: center;
     gap: 1rem;
 }
-.sub-title-container> h3> img {
-    width: clamp(32px, 5vw, 50px);
-    height: clamp(32px, 5vw, 50px);
-}
 .traits-container {
     display: flex;
     gap: 1rem;
@@ -128,6 +134,13 @@
 .sub-title> div> img {
     width: clamp(30px, 5vw, 60px);
     height: clamp(30px, 5vw, 60px);
+    filter:
+    sepia(20%)
+    contrast(90%)
+    brightness(95%);
+    opacity: 0.55;
+    mix-blend-mode: multiply;
+    filter: sepia(30%) contrast(85%);
 }
 .compass {
     opacity: 0.8;
@@ -170,15 +183,11 @@
     align-items: center;
     gap: 1rem;
 }
-.voyage-timeline> h3> img {
-    width: clamp(32px, 5vw, 50px);
-    height: clamp(32px, 5vw, 50px);
-}
 .voyage-container {
     padding: 30px 0;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 }
 .voyage-section {
     width: 100%;
@@ -209,30 +218,35 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
+    filter:
+    sepia(20%)
+    contrast(90%)
+    brightness(95%);
+    opacity: 0.55;
+    mix-blend-mode: multiply;
+    filter: sepia(30%) contrast(85%);
 }
 .dates::after {
     content: "";
     position: absolute;
     width: 4px;
-    height: 100%;     
-    bottom: -22px;
+    height: 95%;     
+    top: 33px;
     left: -21px;
-    background:
-    radial-gradient(
-        circle,
-        rgba(27, 73, 101, 0.5) 0 2px,
-        burlywood 2px 3px,
-        transparent 4px
-    );
-    background-size: 8px 16px;
     background: #8b642e;
-    box-shadow:
-        2px 0 4px rgba(0,0,0,.4);
-    background-repeat: repeat-y;
-    background-position: center;
+    opacity: 0.65;
+    mix-blend-mode: multiply;
+    border-radius: 999px;
 }
 .dates> img {
     display: none;
+    filter:
+    sepia(20%)
+    contrast(90%)
+    brightness(95%);
+    opacity: 0.55;
+    mix-blend-mode: multiply;
+    filter: sepia(30%) contrast(85%);
 }
 .dates> p {
     margin: 20px 0 0 0;
@@ -253,8 +267,7 @@
             rgba(255,250,230,.8),
             rgba(255,250,230,.8)
         ),
-    url("../../images/cv/parchedPaper.png");
-
+    url("../../images/cv/parchedPaper.webp");
 }
 .details> div {
     display: flex;
@@ -264,13 +277,28 @@
 .details> div> img {
     width: clamp(28px, 4vw, 40px);
     height: clamp(28px, 4vw, 40px);
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+    filter:
+        grayscale(1)
+        contrast(1.6)
+        brightness(0.9)
+        sepia(0.4);
 }
-.details> div> div> span {
+.details> div> div> span,
+.details> div> div> h4,
+.details> ul> li {
     color: #0A2540;
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+    filter:
+        grayscale(1)
+        contrast(1.6)
+        brightness(0.9)
+        sepia(0.4);
 }
 .details> div> div> h4 {
     font-size: clamp(1.3rem, 1.5vw, 1.8rem);
-    color: #0A2540;
     letter-spacing: 1.2px;
 }
 .details> ul {
@@ -280,7 +308,6 @@
 }
 .details> ul> li {
     font-size: clamp(0.8rem, 1.2vw, 1.5rem);
-    color: #0A2540;
     line-height: 1.2;
     font-family: 'Merriweather', serif;
 }
@@ -300,10 +327,6 @@
     align-items: center;
     gap: 1rem;
 }
-.academy-section> h3> img {
-    width: clamp(32px, 5vw, 50px);
-    height: clamp(32px, 5vw, 50px);
-}
 .academy-section> ul {
     display: flex;
     flex-direction: column;
@@ -318,6 +341,13 @@
 .academy-section> ul> li> img {
     width: clamp(28px, 4vw, 40px);
     height: clamp(28px, 4vw, 40px);
+    filter:
+    sepia(20%)
+    contrast(90%)
+    brightness(95%);
+    opacity: 0.55;
+    mix-blend-mode: multiply;
+    filter: sepia(30%) contrast(85%);
 }
 .academy-section> ul> li> span {
     letter-spacing: 1px;
@@ -346,10 +376,6 @@
     align-items: center;
     gap: 1rem;
 }
-.explore-section> h3> img {
-    width: clamp(32px, 5vw, 50px);
-    height: clamp(32px, 5vw, 50px);
-}
 .explore-list {
     width: 99%;
     margin: 0 0 0 0;
@@ -362,43 +388,67 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    border: 2px burlywood solid;
-    border-radius: 12px;
-    background: rgba(255,245,220,.75);
+    background-image: url("../../images/cv/cardParchment.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: drop-shadow(1px 1px 5px rgba(0,0,0,.5));
     color: #0f2d4a;
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 130px;
 }
 .explore-list> li::after {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: -9px;
+    bottom: -20px;
     transform: translateX(-50%);
-    width: 15px;
-    height: 15px;
-    background: #f4efe6;
-    border: 2px burlywood solid;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    background-image: url("../../images/cv/anchor.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .explore-list> li> img {
-    width: inherit;
+    width: 90%;
+    margin: 5% auto;
     height: 50%;
     padding: 10px;
-    border-radius: 1rem;
-    filter: drop-shadow(4px 8px 8px rgba(0,0,0,.6));
+    filter:
+    sepia(20%)
+    contrast(90%)
+    brightness(95%);
+    opacity: 0.85;
+    mix-blend-mode: multiply;
+    filter: sepia(10%) contrast(85%);
+}
+.explore-list> li> h4,
+.language,
+.logbook-link,
+.logbook-link .icon {
+    color: #0A2540;
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+    filter:
+        grayscale(1)
+        contrast(1.6)
+        brightness(0.9)
+        sepia(0.4);
 }
 .explore-list> li> h4 {
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
     font-size: clamp(1.1rem, 1.2vw, 1.5rem);
 }
 .language {
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content: flex-start;
     gap: 5px;
+    letter-spacing: 1px;
 }
 .language> span {
     font-size: clamp(0.6rem, 0.8vw, 1.1rem);
@@ -408,8 +458,9 @@
 }
 .logbook-link {
     color: #0f2d4a;
-    width: fit-content;
-    margin-bottom: 20px;
+    width: 95%;
+    margin: 0 auto 20px auto;
+    letter-spacing: 1px;
 }
 .logbook-link> span:last-child {
     position: relative;
@@ -425,7 +476,7 @@
     background: linear-gradient(
         to right,
         transparent 0%,
-        burlywood 50%,
+        #0f2d4a 50%,
         transparent 100%
     );
     transform: translateX(-50%);
@@ -593,6 +644,10 @@
     }
     .explore-list> li> a {
         margin-left: 3%;
+    }
+    .explore-list> li::after {
+        background-image: url("../../images/cv/location.webp");
+        bottom: -26px;
     }
     .logbook-link {
         margin-bottom: 0;
