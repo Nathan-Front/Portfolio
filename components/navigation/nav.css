@@ -138,8 +138,58 @@
 .overlay {
     display: none;
 }
-.main-title-container-mobile {
-    display: none !important;
+body[data-page="voyage"]> nav> .main-title-container,
+body[data-page="contact"]> nav> .main-title-container {
+    display: none;
+}
+body[data-page="profile"]> nav> .main-title-container {
+    position: fixed;
+    top: 0;
+    left: 30%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin-top: calc(var(--nav-height));
+    padding: 1.5rem;
+    gap: 1rem;
+    background-image: url("../../images/cv/woodBanner.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform-origin: top center;
+    animation: swayFrontBack 5s ease-in-out infinite;
+    filter: drop-shadow(0 10px 10px rgba(0,0,0,.25));
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+@keyframes swayFrontBack{
+    0%,100%{
+        transform: perspective(1200px) rotateX(4deg);
+        filter: drop-shadow(0 15px 12px rgba(0,0,0,.3));
+    }
+    50%{
+        transform: perspective(1200px) rotateX(-4deg);
+        filter: drop-shadow(0 5px 6px rgba(0,0,0,.15));
+    }
+}
+body[data-page="profile"]> nav> .main-title-container> img {
+    width: clamp(32px, 5vw, 50px);
+    height: clamp(32px, 5vw, 50px);
+}
+body[data-page="profile"]> nav> .main-title-container> h2 {
+    font-family: "Pirata One", serif;
+    font-size: clamp(1.1rem, 2vw, 2rem);
+    color: #b08a32;
+    text-shadow:
+        1px 2px 0 #2b1809,
+        -1px -1px 0 rgba(255,220,150,.25),
+        0 4px 5px rgba(0,0,0,.7);
+    margin: 10% auto 0 auto;
+    letter-spacing: 5px;
+    text-align: center;
+}
+.main-title-container.hideBanner {
+    opacity: 0;
+    visibility: hidden;
 }
 @media only screen and (max-width: 640px) {
     :root{
@@ -163,7 +213,7 @@
         position: absolute !important;
         flex-direction: column;
         width: 80% !important;
-        height: 100vh;
+        height: 100dvh;
         gap: 1rem;
         top: 0;
         right: 0;
@@ -275,6 +325,7 @@
         inset 10px 0 30px rgba(0,0,0,.2);
         padding: 0;
         box-sizing:border-box;
+        min-height: 100dvh;
     }
     .overlayActive {
         display: flex;
@@ -294,42 +345,14 @@
         );
         overflow-y: hidden;
     }
-    body[data-page="profile"]> nav>.main-title-container-mobile  {
-        position: absolute;
-        display: flex !important;
-        justify-content: flex-start !important;
-        width: 50% !important;
+    body[data-page="profile"]> nav>.main-title-container  {
+        width: 60%;
         left: 10px;
-        top: 65px;
+        top: -5px;
         padding: 1rem;
-        gap: 1rem;
-        background-image: url("../../images/cv/woodBanner.webp");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        transform-origin: top center;
-        animation: swayFrontBack 5s ease-in-out infinite;
-        filter: drop-shadow(0 10px 10px rgba(0,0,0,.25));
     }
-    @keyframes swayFrontBack{
-        0%,100%{
-            transform: perspective(1200px) rotateX(4deg);
-            filter: drop-shadow(0 15px 12px rgba(0,0,0,.3));
-        }
-        50%{
-            transform: perspective(1200px) rotateX(-4deg);
-            filter: drop-shadow(0 5px 6px rgba(0,0,0,.15));
-        }
-    }
-    .main-title-container-mobile> h2 {
-        font-family: "Pirata One", serif;
-        font-size: clamp(0.9rem, 2vw, 2rem);
-        color: #d4af37;
-        text-shadow:
-            1px 1px 0 #3a2414,
-            0 0 5px rgba(255,215,0,.3);
-        margin: 15% auto 0 auto;
-        letter-spacing: 5px;
-        text-align: center;
+    body[data-page="profile"]> nav> .main-title-container> h2 {
+        margin: 13% auto 0 auto;
     }
     .mobile-footer {
         display: flex;

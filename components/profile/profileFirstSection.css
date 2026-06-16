@@ -1,5 +1,7 @@
 #app {
     display: flex;
+    justify-content:center;
+    
 }
 .profile-first-section {
     width: 25%;
@@ -9,6 +11,8 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    box-shadow:
+        15px 0 30px rgba(0,0,0,.35);
 }
 .profile-first-section> div {
     display: flex;
@@ -16,20 +20,20 @@
     color: white;
     width: 80%;
     justify-content: center;
-    margin-top: 50px;
 }
 .avatar-container {
     position:relative;
     width: 100%;
     aspect-ratio: 1;
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
 }
 .avatar-image,
 .frame-image {
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
+    position: absolute;
+    inset: 0;
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
 }
 .avatar-image {
     object-fit: cover;
@@ -101,6 +105,13 @@
 .contact-container> li> a {
     font-family: 'Merriweather', serif;
 }
+.contact-container> li> span,
+.contact-container> li> p,
+.portfolio-container> li> span,
+.portfolio-container> li> a,
+.portfolio-container> li> p {
+    font-size: clamp(0.8rem, 1.3vw, 1.5rem);
+}
 .contact-container,
 .portfolio-container,
 .language-container {
@@ -166,8 +177,8 @@
    
 }
 .tags {
-    padding-left: 15px;
-    text-indent: -15px;
+    padding-left: 7px;
+    text-indent: -7px;
 }
 @media only screen and (max-width: 640px) {
     #app {

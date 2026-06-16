@@ -1,14 +1,17 @@
 let mobileNavOpen = false;
 function toggleNavbar() {
     const navbar = document.querySelector(".navbar");
+    const banner = document.querySelector(".main-title-container");
     let lastScrollY = window.scrollY;
     window.addEventListener("scroll", () => {
     if (mobileNavOpen) return;
     const currentScrollY = window.scrollY;
     if (currentScrollY > lastScrollY) {
         navbar.classList.add("hide");
+        banner.classList.add("hideBanner");
     } else {
         navbar.classList.remove("hide");
+        banner.classList.remove("hideBanner");
     }
     lastScrollY = currentScrollY;
     });
