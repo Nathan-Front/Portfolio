@@ -60,6 +60,7 @@ async function fetchHTML() {
         boatTimeline();
         backToTop();
         openMobileNav();
+        hoverCardDropAnchor();
         if (page === "contact") {
             sendMessage();
         }

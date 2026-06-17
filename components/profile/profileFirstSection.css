@@ -6,13 +6,12 @@
 .profile-first-section {
     width: 25%;
     padding: 80px 0;
-    background-color: rgba(27, 73, 101, 0.5);
+    background-color:rgba(27, 73, 101, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    box-shadow:
-        15px 0 30px rgba(0,0,0,.35);
+    box-shadow: 15px 0 30px rgba(0,0,0,.35);
 }
 .profile-first-section> div {
     display: flex;
@@ -44,7 +43,7 @@
     object-fit:contain;
     z-index: 1;
     pointer-events:none;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,.25));
+    
     animation:shipRock 6s ease-in-out infinite;
 }
 @keyframes shipRock {
@@ -78,7 +77,7 @@
     bottom: 0;
     width: 100%;
     height: 2px;
-     background: linear-gradient(
+    background: linear-gradient(
         to right,
         transparent 0%,
         burlywood 50%,
@@ -96,12 +95,9 @@
     display: flex;
     gap: 0.5rem;
 }
-.info-container> li> span {
-    font-size: clamp(0.8rem, 1vw, 1.2rem);
-}
+.info-container> li> span,
 .info-container> li> p {
-    font-size: clamp(0.8rem, 1vw, 1.2rem);
-   
+    font-size: clamp(0.7rem, 1vw, 1.1rem);
 }
 .contact-container> li> a {
     font-family: 'Merriweather', serif;
@@ -204,17 +200,25 @@
         width: 50% !important;
         margin-top: 170px !important;
     }
-    .avatar-image {
-        filter:
-        sepia(50%)
-        saturate(250%)
-        hue-rotate(350deg)
-        brightness(0.95);
-    }
     .contact-container,
     .portfolio-container,
     .language-container {
         width: 80%;
         margin: 1.5rem auto 0 auto;
+    }
+    .info-container> li> span,
+    .info-container> li> p,
+    .contact-container> li,
+    .contact-container> li> span,
+    .contact-container> li> p,
+    .contact-container> li> a,
+    .portfolio-container> li,
+    .portfolio-container> li> span,
+    .portfolio-container> li> p,
+    .portfolio-container> li> a,
+    .language-container> li,
+    .language-container> li> p {
+        font-size: clamp(0.8rem, 1vw, 1.1rem);
+    
     }
 }

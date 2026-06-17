@@ -255,28 +255,53 @@
 }
 .details {
     width: 70%;
+    min-height: 250px;
     padding: 1rem;
-    border: 2px burlywood solid;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    border-radius:
-        20px 5px 20px 5px;
-        background:
-        linear-gradient(
-            rgba(255,250,230,.8),
-            rgba(255,250,230,.8)
-        ),
-    url("../../images/cv/parchedPaper.webp");
+    padding: 2rem 1rem;
+    position: relative;
 }
-.details> div {
+.details-header-image {
+    height: 110px;
+    min-height: 100px;
+    max-height: 120px;
+    top: 0;
+    left: 0;
+    background-image: url("../../images/cv/paperDagger.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+     /*   filter:
+        drop-shadow(0 -3px 2px rgba(0,0,0,.35)) /*top*/
+       /* drop-shadow(-3px 0 2px rgba(0,0,0,.35)) /*left*/
+       /* drop-shadow(3px 0 2px rgba(0,0,0,.35)); /*right*/
+    
+   /* clip-path: inset(0 0 1px 0);*/
+}
+.details-text-content {
+    width: 100%;
+    background-image: url("../../images/cv/paperDaggerHalf.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: -2px;
+   /* filter:
+        drop-shadow(-3px 0 2px rgba(0,0,0,.35)) 
+        drop-shadow(-3px 0 2px rgba(0,0,0,.35)) 
+        drop-shadow(3px 0 2px rgba(0,0,0,.35)); 
+    
+    clip-path: inset(1px 0 0 0);*/
+}
+.details-text-content> div {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 8px;
 }
-.details> div> img {
-    width: clamp(28px, 4vw, 40px);
-    height: clamp(28px, 4vw, 40px);
+.details-text-content> div> img {
+    margin-left: 10%;
+    width: clamp(35px, 4vw, 50px);
+    height: clamp(35px, 4vw, 50px);
     mix-blend-mode: multiply;
     opacity: 0.75;
     filter:
@@ -285,9 +310,12 @@
         brightness(0.9)
         sepia(0.4);
 }
-.details> div> div> span,
-.details> div> div> h4,
-.details> ul> li {
+.details-text-content> div> div {
+    width: 70%;
+}
+.details-text-content> div> div> span,
+.details-text-content> div> div> h4,
+.details-text-content> ul> li {
     color: #0A2540;
     mix-blend-mode: multiply;
     opacity: 0.75;
@@ -297,19 +325,31 @@
         brightness(0.9)
         sepia(0.4);
 }
-.details> div> div> h4 {
-    font-size: clamp(1.3rem, 1.5vw, 1.8rem);
+.details-text-content> div> div> h4 {
+    font-size: clamp(1.1rem, 1.5vw, 1.8rem);
     letter-spacing: 1.2px;
 }
-.details> ul {
+.details-text-content> ul {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    margin: -1px auto 0 auto;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-.details> ul> li {
+.details-text-content> ul> li {
+    width: 80%;
+    margin: 0 auto;
     font-size: clamp(0.8rem, 1.2vw, 1.5rem);
     line-height: 1.2;
     font-family: 'Merriweather', serif;
+}
+.details-text-content> ul> li:first-child {
+    margin-top: 30px;
+}
+.details-text-content> ul> li:last-child {
+    margin-bottom: 40px;
 }
 .academy-section {
     position: relative;
@@ -384,34 +424,53 @@
     gap: 10px;
     padding: 30px 0;
 }
-.explore-list> li {
+.explored-islands {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    background-image: url("../../images/cv/cardParchment.png");
+    color: #0f2d4a;
+    position: relative;
+    margin-bottom: 130px;
+    isolation: isolate;
+    z-index: 0;
+}
+.explored-islands::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../images/cv/cardParchment.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     filter: drop-shadow(1px 1px 5px rgba(0,0,0,.5));
-    color: #0f2d4a;
-    position: relative;
-    margin-bottom: 130px;
+    z-index: -1;
 }
-.explore-list> li::after {
+.explored-islands::after {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: -20px;
+    bottom: -39px;
     transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 120px;
     border-radius: 50%;
-    background-image: url("../../images/cv/anchor.webp");
+    background-image: url("../../images/cv/anchorDrop.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    transition: transform .5s ease;
+    z-index: -2;
 }
-.explore-list> li> img {
+.explored-islands:has(.logbook-link:hover)::after {
+    transform: translate(-50%, 72px);
+}
+.explored-islands:has(.logbook-link:hover) .location-icon::after {
+    display: none;
+    animation: unset;
+}
+
+.explored-islands> img {
     width: 90%;
     margin: 5% auto;
     height: 50%;
@@ -424,7 +483,7 @@
     mix-blend-mode: multiply;
     filter: sepia(10%) contrast(85%);
 }
-.explore-list> li> h4,
+.explored-islands> h4,
 .language,
 .logbook-link,
 .logbook-link .icon {
@@ -437,7 +496,7 @@
         brightness(0.9)
         sepia(0.4);
 }
-.explore-list> li> h4 {
+.explored-islands> h4 {
     width: 90%;
     margin: 0 auto;
     font-size: clamp(1.1rem, 1.2vw, 1.5rem);
@@ -523,6 +582,7 @@
     background-size: 8px 16px;
     background-repeat: repeat-y;
     animation: trailFlow 2s linear infinite;
+    z-index: -3;
 }
 @keyframes trailFlow {
     from {
@@ -617,42 +677,56 @@
         padding: 0;
     }
     .details> div {
-        width: 90%;
-        margin: 5% 0 0 5%;
+        width: 95%;
+        margin: 0 auto;
     }
-    .details> ul {
-        width: 90%;
-        margin: 0 0 5% 5%;
+    .details> div:last-child {
+        margin-top: -1px;
     }
-    .details> ul> li {
-        width: 100%;
+    .details-text-content> div {
+        align-items: center;
+    }
+    .details-text-content> ul {
+        width: 95%;
+        margin: -1px auto 5% auto;
+    }
+    .details-text-content> ul> li:first-child {
+        margin-top: 20px;
+    }
+    .details-text-content> ul> li:last-child {
+        margin-bottom: 50px;
     }
     .explore-list {
         width: 90%;
         margin: 0 auto;
         gap: 2rem;
     }
-    .explore-list> li {
+    .explored-islands {
         width: 100%;
         margin: 0 auto;
     }
-    .explore-list> li> img,
-    .explore-list> li> h4,
+    .explored-islands> img,
+    .explored-islands> h4,
     .language {
         width: 90%;
         margin: 0 auto;
     }
-    .explore-list> li> a {
+    .explored-islands> a {
         margin-left: 3%;
     }
-    .explore-list> li::after {
+    .explored-islands::after {
         background-image: url("../../images/cv/location.webp");
-        bottom: -26px;
+        bottom: -20px;
+        width: 30px;
+        height: 30px;
+        z-index: 1;
+    }
+    .explored-islands:has(.logbook-link:hover)::after {
+        transform: translateX(-50%);
     }
     .logbook-link {
         margin-bottom: 0;
     }
-    .explore-list> li::before,
     .location-icon::after {
         content: unset;
         width: unset;

@@ -36,3 +36,13 @@ function timelineIntersectingRight() {
     );
     dates.forEach((date) => observer.observe(date));
 }
+
+function hoverCardDropAnchor() {
+   const cards = document.querySelectorAll(".logbook-link");
+   cards.forEach(anchor => {
+        anchor.addEventListener("mouseenter", () => {
+            document.querySelector(".explored-islands").classList.add("drop");
+        });
+   });
+
+}
