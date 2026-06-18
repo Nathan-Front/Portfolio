@@ -412,3 +412,8 @@ body[data-page="profile"]> nav> .main-title-container> h2 {
         letter-spacing: 1px;
     }
 }
+@media (min-width: 1600px) and (max-width: 2560px) {
+    body[data-page="profile"]> nav> .main-title-container {
+        width: 30%;
+    }
+}

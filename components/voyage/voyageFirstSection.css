@@ -172,3 +172,8 @@
         padding: 15px;
     }
 }
+@media (min-width: 1600px) and (max-width: 2560px) {
+    .map {
+        bottom: -100px;
+    }
+}
