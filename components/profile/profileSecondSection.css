@@ -55,7 +55,7 @@
     padding: 2rem 1.5rem;
     transform: rotate(-0.4deg);
 }
-.tack{
+.tack {
     position:absolute;
     width:18px;
     height:18px;
@@ -63,19 +63,19 @@
     drop-shadow(0 2px 2px rgba(0,0,0,.4))
     drop-shadow(0 4px 6px rgba(0,0,0,.2));
 }
-.tl{
+.tl {
     top:10px;
     left:18px;
 }
-.tr{
+.tr {
     top:15px;
     right:18px;
 }
-.bl{
+.bl {
     bottom:10px;
     left:10px;
 }
-.br{
+.br {
     bottom:27px;
     right:10px;
 }
