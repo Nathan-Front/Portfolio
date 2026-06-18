@@ -1,6 +1,6 @@
 .about-section {
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +20,7 @@
             rgba(0,0,0,0.55)
         ),
         url("../../images/index/map.webp");
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     z-index: -2;
@@ -172,8 +172,25 @@
         padding: 15px;
     }
 }
-@media (min-width: 1600px) and (max-width: 2560px) {
+@media (max-width: 1920px) {
+    .about-section {
+        padding: 250px 0 250px 0;
+    }
     .map {
-        bottom: -100px;
+        bottom: 110px;
+    }
+}
+@media (min-width: 1921px) and (max-width: 2560px) {
+    .about-section {
+        padding: 300px 0 300px 0;
+    }
+    .split-reveal {
+        margin-top: 100px;
+    }
+    .about-section> p {
+        margin: 50px auto;
+    }
+    .map {
+        bottom: 250px;
     }
 }

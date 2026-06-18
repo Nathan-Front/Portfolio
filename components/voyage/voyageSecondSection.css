@@ -153,12 +153,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1920px;
+    max-width: 2560px;
     margin: 0 auto;
     padding-top: 80px;
     position: relative;
 }
-.timeline-item{
+.timeline-item {
     z-index: 2;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -171,7 +171,7 @@
     display: grid;
     position: relative;
 }
-.timeline-left{
+.timeline-left {
     text-align: right;
     justify-content: flex-end;
     align-items: stretch;
@@ -298,7 +298,6 @@
     gap: 5px;
 }
 .timeline-text> div> p {
-    font-size: clamp(0.8rem, 1.1vw, 1.3rem);
     font-weight: 400;
     color:#f4eccf;
     font-family: 'Merriweather', serif;  
@@ -424,7 +423,6 @@
 }
 .timeline-image-wrap> p {
     margin-bottom: 1rem;
-    font-size: clamp(0.9rem, 1.1vw, 1.5rem);
     font-weight: 600;
 }
 .timeline-image-wrap> a {
@@ -741,7 +739,89 @@
         width: 100%;
     }
 }
-
+@media (max-width: 1920px) {
+    .timeline-upper-container {
+        padding: 200px 0;
+    }
+    .timeline-upper-sub-inner-content {
+        width: 70%;
+        padding: 5rem 3rem;
+    }
+    .padding-top,
+    .padding-bottom  {
+        height: 150px;
+    }
+    .padding-bottom {
+        margin-top: -50px;
+    }
+    .timeline-item {
+        margin: 100px 0 0 0;
+    }
+    .last-timeline-container {
+        margin-bottom: 50px;
+    }
+    .timeline-text> h3 {
+        font-size: clamp(1.1rem, 2vw, 2.5rem);
+    }
+    .read-more-btn {
+        bottom: -3rem;
+    }
+    .timeline-text> div:nth-child(4) {
+        margin-top: 2.5rem;
+    }
+}
+@media (min-width: 1537px) and (max-width: 1920px) {
+    .timeline-text> h3> img,
+    .timeline-text> div> img {
+        width: clamp(4rem, 50%, 15rem);
+    }
+}
+@media (min-width: 1921px) and (max-width: 2560px) {
+    .timeline-upper-container {
+        padding: 200px 0;
+    }
+    .timeline-upper-sub-inner-content {
+        width: 70%;
+        padding: 10rem 5rem;
+    }
+    .padding-top,
+    .padding-bottom  {
+        height: 200px;
+    }
+    .padding-bottom {
+        margin-top: -100px;
+    }
+    .timeline-item {
+        margin: 150px auto 0 auto;
+        grid-template-columns: 500px 120px 1fr;
+    }
+    .last-timeline-container {
+        margin-bottom: 100px;
+    }
+    .timeline-date {
+        padding: 3rem;
+    }
+    .timeline-progress {
+        left: 550px;
+    }
+    .timeline-text> h3> img,
+    .timeline-text> div> img {
+        width: clamp(4rem, 50%, 15rem);
+    }
+    .timeline-text> h3 {
+        font-size: clamp(1.1rem, 2vw, 3rem);
+    }
+    .timeline-text> div:nth-child(2)> ul> li> span {
+        padding: 0 5px;
+        font-size: clamp(1rem, 1.2vw, 1.8rem);
+    }
+    .read-more-btn {
+        bottom: -3rem;
+    }
+    .timeline-text> div:nth-child(4) {
+        margin-top: 2.5rem;
+    }
+}
 
 
 
