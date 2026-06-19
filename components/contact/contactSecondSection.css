@@ -168,12 +168,13 @@ textarea::placeholder {
 }
 .contact-right-container> ul> li> img {
     width: 15%;
+    mix-blend-mode: multiply;
+    opacity: 0.85;
     filter:
-        sepia(100%)
-        saturate(250%)
-        hue-rotate(350deg)
-        brightness(1)
-        drop-shadow(2px 2px 3px rgba(0,0,0,0.5));
+        grayscale(1)
+        contrast(1.6)
+        brightness(0.9)
+        sepia(0.4);
 }
 .contact-right-container> ul> li> div> h4 {
     font-family: "Pirata One", serif;
@@ -183,6 +184,18 @@ textarea::placeholder {
 }
 .contact-right-container> ul> li> div> p {
     font-family: "Pirata One", serif;
+}
+.contact-right-container-title> h3,
+.contact-right-container-title> img,
+.contact-right-container> ul> li> div> h4,
+.contact-right-container> ul> li> div> p {
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+    filter:
+        grayscale(1)
+        contrast(1.6)
+        brightness(0.9)
+        sepia(0.4);
 }
 .honeypot {
     position:absolute;
