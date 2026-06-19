@@ -10,13 +10,14 @@
 }
 .contact-first-section-images {
     width: 100%;
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
 }
 .contact-first-section-images> img {
-    width: clamp(50px, 5vw, 80px);
+    width: clamp(50px, 5vw, 120px);
 }
 .contact-first-section-images> img:first-child {
     transform:scaleY(-1)  rotate(-90deg);
@@ -32,7 +33,6 @@
 }
 .contact-first-section-title> h1 {
     font-family: "Pirata One", serif;
-    font-size: clamp(1.8rem, 5vw, 3rem);
     letter-spacing: 2px;
     background:
         linear-gradient(
@@ -53,12 +53,39 @@
     height: 40px;
     margin: 0;
 }
+.contact-first-section> p:nth-child(3) {
+    margin-top: 2%;
+}
 .contact-first-section> p {
     font-family: "Pirata One", serif;
+    font-size: clamp(1.1rem, 1.5vw, 2rem);
 }
 @media only screen and (max-width: 640px) {
     .contact-first-section {
         width: 100%;
         margin: 2rem auto 0 auto;
+    }
+    .contact-first-section-images {
+        margin-top: 0px;
+    }
+    .contact-first-section> p {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 1279px) {
+    .contact-first-section-title> h1 {
+        font-size: clamp(2rem, 6vw, 6rem);
+    }
+}
+@media (min-width: 1366px) and (max-width: 1536px) {
+    .contact-first-section-title> img {
+        height: 60px;
+    }
+}
+@media (min-width: 1537px) and (max-width: 2560px) {
+    .contact-first-section-title> img {
+        height: 80px;
     }
 }
