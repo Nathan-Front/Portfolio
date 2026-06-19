@@ -661,6 +661,7 @@
     .timeline-item{
         grid-template-columns:  64px 1fr;
         width: 100%;
+        padding: 0;
     }
     .timeline-left{
         text-align: left;

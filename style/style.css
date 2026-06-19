@@ -76,6 +76,7 @@ body {
     }
     body[data-page="contact"] {
         background-image: url("../images/cv/mobileBackground.webp");
+
     }
     body {
         background-image: url("../images/cv/mobileBackground.webp");

@@ -162,7 +162,7 @@
     text-shadow: 0 1px rgba(255,255,255,.3);
 }
 .sub-title> ul> li:last-child {
-    font-size: clamp(1rem, 1.2vw, 1.8rem);
+    font-size: clamp(0.9rem, 1.2vw, 1.6rem);
     font-family: 'Merriweather', serif;
     color:#233b55;
     text-shadow: 0 1px rgba(255,255,255,.3);
