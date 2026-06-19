@@ -26,9 +26,9 @@
 }
 .seal {
     position: absolute;
-    top: 13px;
-    right: 50px;
-    width: 60px;
+    top: 15px;
+    right: 35px;
+    width: clamp(40px, 5vw, 70px);
     mix-blend-mode: multiply;
     opacity: 0.92;
     filter:
