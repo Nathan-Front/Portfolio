@@ -739,7 +739,7 @@
         width: 100%;
     }
 }
-@media (max-width: 1920px) {
+@media (min-width: 1366px) and (max-width: 1920px) {
     .timeline-upper-container {
         padding: 200px 0;
     }
