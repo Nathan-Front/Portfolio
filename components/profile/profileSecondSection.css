@@ -79,9 +79,15 @@
     bottom:27px;
     right:10px;
 }
-.about-me-container> h3 {
-    font-size: clamp(1.3rem, 2vw, 2rem);
+.about-me-container> h3,
+.sub-title-container> h3,
+.voyage-timeline> h3,
+.academy-section> h3,
+.explore-section> h3 {
+    font-size: clamp(1.3rem, 2vw, 2.5rem);
     color: #0A2540;
+}
+.about-me-container> h3 {
     text-shadow: 0 2px rgba(255,255,255,.3);
     display: flex;
     align-items: center;
@@ -116,8 +122,6 @@
     padding: 2rem 1.5rem;
 }
 .sub-title-container> h3 {
-    font-size: clamp(1.3rem, 2vw, 2rem);
-    color: #0A2540;
     text-shadow: 0 2px rgba(255,255,255,.3);
     display: flex;
     align-items: center;
@@ -152,13 +156,13 @@
     justify-content: center;
 }
 .sub-title> ul> li:first-child {
-    font-size: clamp(0.8rem, 1.3vw, 1.5rem);
+    font-size: clamp(1rem, 1.2vw, 1.8rem);
     font-weight: 600;
     color:#233b55;
     text-shadow: 0 1px rgba(255,255,255,.3);
 }
 .sub-title> ul> li:last-child {
-    font-size: clamp(0.8rem, 1.3vw, 1.5rem);
+    font-size: clamp(1rem, 1.2vw, 1.8rem);
     font-family: 'Merriweather', serif;
     color:#233b55;
     text-shadow: 0 1px rgba(255,255,255,.3);
@@ -176,8 +180,6 @@
     padding: 2rem 1.5rem;
 }
 .voyage-timeline> h3 {
-    font-size: clamp(1.3rem, 2vw, 2rem);
-    color: #0A2540;
     text-shadow: 0 2px rgba(255,255,255,.3);
     display: flex;
     align-items: center;
@@ -341,7 +343,7 @@
 .details-text-content> ul> li {
     width: 80%;
     margin: 0 auto;
-    font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+    font-size: clamp(1rem, 1.2vw, 1.8rem);
     line-height: 1.2;
     font-family: 'Merriweather', serif;
 }
@@ -360,8 +362,6 @@
     padding: 2rem 1.5rem;
 }
 .academy-section> h3 {
-    font-size: clamp(1.3rem, 2vw, 2rem);
-    color: #0A2540;
     text-shadow: 0 2px rgba(255,255,255,.3);
     display: flex;
     align-items: center;
@@ -394,7 +394,7 @@
 }
 .academy-section> ul> li> span,
 .academy-section> ul> li> p {
-    font-size: clamp(1rem, 1.3vw, 1.5rem);
+    font-size: clamp(1rem, 1.2vw, 1.8rem);
     color:#233b55;
     text-shadow: 0 1px rgba(255,255,255,.3);
 }
@@ -409,8 +409,6 @@
     transform: rotate(-0.2deg);
 }
 .explore-section> h3 {
-    font-size: clamp(1.3rem, 2vw, 2rem);
-    color: #0A2540;
     text-shadow: 0 2px rgba(255,255,255,.3);
     display: flex;
     align-items: center;
@@ -510,8 +508,8 @@
     letter-spacing: 1px;
 }
 .language> span {
-    font-size: clamp(0.6rem, 0.8vw, 1.1rem);
-    padding: 5px;
+    font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+    padding: 3px;
     border: 1px burlywood solid;
     border-radius: 0.25rem;
 }
@@ -520,6 +518,7 @@
     width: 95%;
     margin: 0 auto 20px auto;
     letter-spacing: 1px;
+    font-size: clamp(1rem, 1.2vw, 1.8rem);
 }
 .logbook-link> span:last-child {
     position: relative;
@@ -545,8 +544,8 @@
     width: 100%;
 }
 .logbook-link .icon {
-    width: 24px;
-    height: 20px;
+    width: clamp(24px, 2vw, 50px);
+    height: clamp(20px, 2vw, 40px);
     display: inline-block;
     background: url("../../images/cv/scroll.webp") center/contain no-repeat;
     transition: transform 0.3s ease;
@@ -743,5 +742,32 @@
     }
     .about-me-container {
         margin-top: 200px;
+    }
+}
+@media (min-width: 906px) and (max-width: 1536px) {
+    .language> span {
+        font-size: clamp(0.8rem, 1vw, 1.2rem);
+    }
+}
+@media (min-width: 1280px) and (max-width: 1920px) {
+    .details-text-content> ul> li:last-child {
+        margin-bottom: 80px;
+    }
+}
+@media (min-width: 1537px) and (max-width: 1920px) {
+    .explored-islands::after {
+        width: 250px;
+        height: 180px;
+        bottom: -60px;
+    }
+}
+@media (min-width: 1921px) and (max-width: 2560px) {
+    .explored-islands::after {
+        width: 250px;
+        height: 180px;
+        bottom: -60px;
+    }
+    .details-text-content> ul> li:last-child {
+        margin-bottom: 80px;
     }
 }

@@ -65,7 +65,7 @@
     width: 80%;
     margin: 0 auto;
     color: white;
-    font-size: clamp(0.9rem, 1.1vw, 1.2rem);
+    font-size: clamp(1rem, 1.2vw, 1.8rem);
     text-align: center;
     padding-bottom: 10px;
     position: relative;
@@ -97,7 +97,7 @@
 }
 .info-container> li> span,
 .info-container> li> p {
-    font-size: clamp(0.7rem, 1vw, 1.1rem);
+    font-size: clamp(1rem, 1.2vw, 1.8rem);
 }
 .contact-container> li> a {
     font-family: 'Merriweather', serif;
@@ -176,7 +176,7 @@
 .language-container> li,
 .language-container> li> p {
     color: white;
-    font-size: clamp(0.7rem, 1vw, 1.1rem);
+    font-size: clamp(1rem, 1.2vw, 1.8rem);
    
 }
 .tags {
