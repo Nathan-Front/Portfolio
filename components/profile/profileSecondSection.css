@@ -274,12 +274,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-     /*   filter:
-        drop-shadow(0 -3px 2px rgba(0,0,0,.35)) /*top*/
-       /* drop-shadow(-3px 0 2px rgba(0,0,0,.35)) /*left*/
-       /* drop-shadow(3px 0 2px rgba(0,0,0,.35)); /*right*/
-    
-   /* clip-path: inset(0 0 1px 0);*/
 }
 .details-text-content {
     width: 100%;
@@ -288,12 +282,6 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     margin-top: -2px;
-   /* filter:
-        drop-shadow(-3px 0 2px rgba(0,0,0,.35)) 
-        drop-shadow(-3px 0 2px rgba(0,0,0,.35)) 
-        drop-shadow(3px 0 2px rgba(0,0,0,.35)); 
-    
-    clip-path: inset(1px 0 0 0);*/
 }
 .details-text-content> div {
     display: flex;
@@ -611,7 +599,7 @@
 }
 
 @media only screen and (max-width: 640px) {
-    .profile-second-section{
+    .profile-second-section {
         width: 100%;
         padding: 0;
         margin: 0;

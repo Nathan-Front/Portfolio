@@ -135,13 +135,13 @@
     z-index: 5;
     position: absolute;
 }
-.padding-top{
+.padding-top {
     background-image: url("../../images/index/timeline/cave.webp");
     background-size: 100% 100%;
     background-position: left;
     background-repeat: no-repeat;
 }
-.padding-bottom{
+.padding-bottom {
     background-image: url("../../images/index/timeline/cave2.webp");
     background-size: 100% 100%;
     background-position: center;
@@ -329,15 +329,15 @@
     padding: 0 3px;
     font-size: clamp(0.7rem, 1vw, 1.2rem);
 }
-.html-tag{
+.html-tag {
     background:#fff7ed;
     color:#ea580c;
 }
-.css-tag{
+.css-tag {
     background:#eff6ff;
     color:#2563eb;
 }
-.js-tag{
+.js-tag {
     background:#fef9c3;
     color:#3a2414;
 }
@@ -433,7 +433,7 @@
     align-items: center;
     position: relative;
 }
-.timeline-image-wrap > a::after {
+.timeline-image-wrap> a::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -462,6 +462,7 @@
     transform: scale(1.05);
     filter: brightness(1.1);
 }
+/*center part*/
 .timeline-progress {
     z-index: 1;
     width: 60px;
@@ -536,7 +537,7 @@
 .voyage-ship.up::after {
     top:-200px;
     bottom:auto;
-     --beam-rotation: 0deg;
+    --beam-rotation: 0deg;
 }
 .voyage-ship.down::after {
     top:auto;
@@ -597,21 +598,7 @@
     50%{
         transform:rotate(1deg) translateX(-70%);
     }
-}/*
-.overlay-fade-top{
-    background-image: linear-gradient(#ffffff, #ffffff);
-    height: 72px;
-    position: absolute;
-    inset: 0% 0% auto;
-    z-index: 2;
 }
-.overlay-fade-bottom{
-    background-image: linear-gradient(to top, #ffffff, #ffffff);
-    height: 72px;
-    position: absolute;
-    inset: auto 0% 0%;
-    z-index: 2;
-}*/
 @media only screen and (max-width: 845px) {
     .timeline-upper-container {
         padding: 30px 0;
@@ -687,7 +674,7 @@
         height: 50%;
     }
     .timeline-text{
-        font-size: 20px;
+        width: 99%;
         padding: 1rem;
     }
     .timeline-text> h3,

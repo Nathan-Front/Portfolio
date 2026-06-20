@@ -1,4 +1,4 @@
-:root{
+:root {
     --nav-height: 85px;
 }
 .navbar {
@@ -53,7 +53,7 @@
     z-index: 1;
     animation: swing 15s linear infinite;
 }
-@keyframes swing{
+@keyframes swing {
     0%,100%{
         transform:rotate(-1deg);
     }
@@ -129,7 +129,7 @@
     background-color:#d4af37;
     transition: width 0.3s ease;
 }
-.nav-links > a:hover::after {
+.nav-links> a:hover::after {
     width: 100%;  
 }
 .close-mobile-nav,
@@ -161,7 +161,7 @@ body[data-page="profile"]> nav> .main-title-container {
     filter: drop-shadow(0 10px 10px rgba(0,0,0,.25));
     transition: opacity 0.4s ease, visibility 0.4s ease;
 }
-@keyframes swayFrontBack{
+@keyframes swayFrontBack {
     0%,100%{
         transform: perspective(1200px) rotateX(4deg);
         filter: drop-shadow(0 15px 12px rgba(0,0,0,.3));
@@ -192,7 +192,7 @@ body[data-page="profile"]> nav> .main-title-container> h2 {
     visibility: hidden;
 }
 @media only screen and (max-width: 640px) {
-    :root{
+    :root {
         --nav-height: 70px;
     }
     .navbar {

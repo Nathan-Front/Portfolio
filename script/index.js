@@ -71,7 +71,7 @@ async function fetchHTML() {
                 <h2>The ship hit a storm!</h2>
                 <p>Unable to set sail.</p>
                 <button onclick="location.reload()">
-                    Try Again
+                    Sail Again
                 </button>
             </div>
         `;
@@ -130,22 +130,20 @@ function displayOneletter() {
     if (!container) return;
     const text = container.textContent.replace(/\s+/g, ' ').trim();
     container.innerHTML = ""; 
-
-    // 1. Break the text into individual span tags
+    //Break the text into individual span tags
     const characterSpans = [...text].map((char) => {
         const span = document.createElement("span");
         if (char === " ") {
-        span.textContent = " "; /* Use a standard normal space instead of &nbsp; */
+        span.textContent = " "; /*Use a standard normal space instead of &nbsp;*/
         } else {
         span.textContent = char;
         }
         container.appendChild(span);
         return span;
     });
-
-    // 2. Type them out one by one by adding the visual CSS class
+    //Type them out one by one by adding the visual CSS class
     let charIndex = 0;
-    const typingSpeed = 20; // Lower numbers mean faster typing (in milliseconds)
+    const typingSpeed = 20; //Lower numbers mean faster typing (in milliseconds)
 
     function typeSequence() {
       if (charIndex < characterSpans.length) {
@@ -154,8 +152,7 @@ function displayOneletter() {
         setTimeout(typeSequence, typingSpeed);
       }
     }
-
-    // Kick off the typing sequence
+    //Kick off the typing sequence
     typeSequence();
 }
 
@@ -219,9 +216,7 @@ function backToTop() {
         } else {
             backToTop.classList.remove("show");
         }
-
         clearTimeout(hideTimer);
-
         hideTimer = setTimeout(() => {
             backToTop.classList.remove("show");
         }, 5000);
